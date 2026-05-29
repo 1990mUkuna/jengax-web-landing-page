@@ -1,4 +1,4 @@
-import appMockup from '../../assets/app-mockup.png'
+import PhoneMockup from './PhoneMockup'
 import styles from './Hero.module.css'
 
 export default function Hero() {
@@ -38,12 +38,8 @@ export default function Hero() {
         </div>
 
         <div className={styles.visual}>
-          <div className={styles.phoneBg} />
-          <img
-            src={appMockup}
-            alt="Jenga-X app showing escrow balance and verified workers"
-            className={styles.phone}
-          />
+          <div className={styles.glow} />
+          <PhoneMockup />
         </div>
       </div>
     </section>

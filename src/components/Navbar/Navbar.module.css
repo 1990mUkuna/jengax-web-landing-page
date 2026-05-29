@@ -76,6 +76,9 @@
   gap: 5px;
   padding: 4px;
   margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .hamburger span {

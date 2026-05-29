@@ -36,6 +36,10 @@
 }
 
 @media (max-width: 600px) {
+  .section {
+    padding: 40px 16px;
+  }
+
   .container {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;

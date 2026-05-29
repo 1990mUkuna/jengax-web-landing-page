@@ -144,3 +144,17 @@
     gap: 56px;
   }
 }
+
+@media (max-width: 600px) {
+  .section {
+    padding: 64px 16px;
+  }
+
+  .header {
+    margin-bottom: 48px;
+  }
+
+  .steps {
+    gap: 40px;
+  }
+}
