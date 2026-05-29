@@ -1,0 +1,82 @@
+.section {
+  padding: 96px 24px;
+  background: linear-gradient(135deg, #e5383b 0%, #c1121f 100%);
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -1.5px;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.65;
+  margin-bottom: 40px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btnDark,
+.btnLight {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: transform 0.15s, opacity 0.2s;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.btnDark:hover,
+.btnLight:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.btnDark {
+  background: #111;
+  color: #fff;
+}
+
+.btnLight {
+  background: #fff;
+  color: #111;
+}
+
+.storeLabel {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.storeLabel small {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

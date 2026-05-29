@@ -1,0 +1,149 @@
+.section {
+  background: var(--color-bg-hero);
+  padding: 80px 0 0;
+  overflow: hidden;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  min-height: 560px;
+}
+
+.content {
+  padding-bottom: 80px;
+}
+
+.headline {
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.subtext {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 380px;
+  margin-bottom: 36px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  background: var(--color-dark);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 100px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btnPrimary:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 100px;
+  border: 1.5px solid var(--color-border);
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.btnSecondary:hover {
+  border-color: var(--color-text-muted);
+  transform: translateY(-1px);
+}
+
+.storeIcon {
+  display: flex;
+  align-items: center;
+}
+
+.freeNote {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
+.visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 520px;
+}
+
+.phoneBg {
+  position: absolute;
+  inset: 0;
+  background: var(--color-dark);
+  border-radius: 32px 32px 0 0;
+}
+
+.phone {
+  position: relative;
+  z-index: 1;
+  width: 260px;
+  border-radius: 24px;
+  box-shadow: 0 32px 64px rgba(0,0,0,0.4);
+  margin-bottom: 48px;
+  transform: rotate(-2deg) translateY(8px);
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .content {
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .subtext {
+    max-width: 100%;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .freeNote {
+    text-align: center;
+  }
+
+  .visual {
+    height: 360px;
+  }
+
+  .phone {
+    width: 200px;
+  }
+}
