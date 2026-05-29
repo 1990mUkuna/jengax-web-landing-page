@@ -2,6 +2,7 @@ import blueprintImg from '../../assets/construction_flow_plan.png'
 import engineerImg from '../../assets/engineer_standing.png'
 import paymentImg from '../../assets/phone_payment-confirmed.png'
 import inspectionImg from '../../assets/man_holding_phone.png'
+import supplierImg from '../../assets/supplier_shop.png'
 import styles from './HowItWorks.module.css'
 
 const STEPS = [
@@ -49,6 +50,17 @@ const STEPS = [
     imgBg: '#1a2a1a',
     reverse: true,
   },
+  {
+    number: '05',
+    title: 'Premium Supplies',
+    description:
+      'Access a curated catalogue of high-quality building materials. From sustainable timber to luxury finishes, we eliminate the markup and ensure only the best materials reach your site at wholesale prices.',
+    cta: 'Browse materials →',
+    img: supplierImg,
+    imgAlt: 'Modern building materials showroom with timber shelves and material samples',
+    imgBg: '#f7f3ee',
+    reverse: false,
+  },
 ]
 
 export default function HowItWorks() {
@@ -60,7 +72,7 @@ export default function HowItWorks() {
             Building should feel like progress, not stress.
           </h2>
           <p className={styles.subtitle}>
-            Four simple steps to your dream project. Manage every step from anywhere in the world.
+            Five simple steps to your dream project. Manage every step from anywhere in the world.
           </p>
         </div>
 
