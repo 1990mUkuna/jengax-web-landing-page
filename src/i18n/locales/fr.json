@@ -17,7 +17,41 @@
     "collective": {"title":"Collectif Jenga","description":"Rejoignez une communauté de milliers de constructeurs de la diaspora partageant conseils, avis sur les fournisseurs et retours locaux.","cta":"Rejoindre le collectif"}
   },
 
-  "markets": {"title":"Où nous construisons.","subtitle":"Mettre en relation la diaspora avec les couloirs africains à la croissance la plus rapide.","list": {"drc":"RDC","angola":"Angola","belgium":"Belgique","france":"France","uk":"Royaume-Uni","canada":"Canada","usa":"États-Unis","southAfrica":"Afrique du Sud"}},
+  "markets": {
+    "title": "Où nous construisons.",
+    "subtitle": "Mettre en relation la diaspora avec les couloirs africains à la croissance la plus rapide.",
+    "list": {"drc":"RDC","angola":"Angola","belgium":"Belgique","france":"France","uk":"Royaume-Uni","canada":"Canada","usa":"États-Unis","southAfrica":"Afrique du Sud"},
+    "hero": {
+      "pill": "Portée mondiale",
+      "title": "Connecter la Diaspora<br />à la Patrie.",
+      "subtitle": "Nous réduisons la distance entre vos rêves et votre héritage. Gestion de construction sécurisée, transparente et vérifiée dans les couloirs africains les plus dynamiques.",
+      "actions": {"explore": "Explorer les marchés","watch": "Voir l'histoire du couloir"}
+    },
+    "corridors": {
+      "header": {"title": "Couloirs phares","sub": "Nos réseaux les plus solides, pensés pour votre tranquillité d'esprit."},
+      "stats": {"topMaterials":"Principaux matériaux","avgLeadTime":"Délai moyen","trustScore":"Score de confiance"},
+      "activeProjectsLabel": "Projets actifs",
+      "0": {"country":"République Démocratique du Congo","title":"Le Couloir Kinshasa–Goma","subtitle":"Au service de plus d'1,5 million de membres de la diaspora en Europe et en Amérique du Nord.","stats": ["Béton, Bois","14 semaines","4.9 ⭐"],"activeProjects":"456+","cta":"Voir le catalogue RDC"},
+      "1": {"country":"Angola","title":"La Métropole de Luanda","subtitle":"Un marché en pleine expansion avec une forte demande de la diaspora lusophone.","stats": ["Acier, Verre","12 semaines","4.8 ⭐"],"activeProjects":"280+","cta":"Explorer les opportunités de Luanda"}
+    },
+    "network": {"title":"Notre réseau de soutien mondial","subtitle":"Nous sommes là où vous êtes. Nos hubs opérationnels dans les principaux centres de la diaspora garantissent une communication fluide et une sécurité financière pour vos projets au pays.","activeHubLabel":"Hub actif","connectCta":"Contacter le bureau local →"},
+    "hubs": {
+      "0": {"city":"Bruxelles, Belgique","desc":"Hub central pour notre communauté de la diaspora d'Europe occidentale et le traitement financier."},
+      "1": {"city":"Paris, France","desc":"Au service de la diaspora africaine francophone avec un soutien financier et des conseils en investissement."},
+      "2": {"city":"Londres, Royaume-Uni","desc":"Opérations stratégiques pour nos marchés anglophones et les normes de conformité mondiale."},
+      "3": {"city":"Toronto, Canada","desc":"Canal direct pour la diaspora nord-américaine construisant en Afrique centrale et occidentale."},
+      "4": {"city":"Atlanta, États-Unis","desc":"Notre siège américain gérant les partenariats technologiques et les relations avec les investisseurs."},
+      "5": {"city":"Johannesburg, Afrique du Sud","desc":"Hub régional de logistique et d'approvisionnement en matériaux pour l'Afrique australe et centrale."}
+    },
+    "vetting": {
+      "0": {"title":"Processus de sélection rigoureux","desc":"Chaque constructeur passe une inspection en 45 points, incluant la solvabilité financière, la qualité des projets passés et la conformité réglementaire."},
+      "1": {"title":"Approvisionnement en matériaux","desc":"Nous sourcions les matériaux en gros directement auprès de fournisseurs vérifiés pour garantir disponibilité et stabilité des prix sur des marchés volatils."},
+      "2": {"title":"Conformité juridique","desc":"Nos équipes juridiques locales gèrent les titres fonciers et les permis de construire afin que vous n'ayez pas à naviguer seul dans la bureaucratie."}
+    },
+    "masters": {"tag":"EXCELLENCE VÉRIFIÉE","title":"Construire avec des maîtres locaux","visualText":"Constructeurs vérifiés sur site","exampleName":"Jean-Pierre M.","exampleRole":"Constructeur vérifié · Kinshasa","verified":"Vérifié"},
+    "cta": {"title":"Construisez votre héritage à <span>Kinshasa.</span>","subtitle":"Faites le premier pas vers votre projet au pays. Rejoignez plus de 5 000 membres de la diaspora qui font confiance à Jenga‑X.","actions": {"getStarted":"Commencer maintenant","schedule":"Planifier une consultation"}},
+    "footer": {"tagline":"Le foyer moderne de la diaspora mondiale qui construit au pays.","marketsTitle":"Marchés","marketsList":["RDC Congo","Angola","Nigéria","Kenya"],"companyTitle":"Entreprise","companyList":["À propos","Carrières","Contactez-nous","Politique de confidentialité"],"supportTitle":"Support","supportList":["Centre d'aide","Conditions d'utilisation","Centre de sécurité","Portail constructeur"],"copy":"© 2024 Jenga‑X. Construisez-le. De n'importe où.","locale":"🌐 Français | 💶 EUR"}
+  },
 
   "howItWorks": {"header": {"title":"Construire devrait ressembler à du progrès, pas du stress.","subtitle":"Cinq étapes simples vers votre projet de rêve. Gérez chaque étape depuis n'importe où dans le monde."},"stepLabel":"ÉTAPE","steps": {"1": {"title":"Planifier & Concevoir","description":"Téléchargez des plans ou utilisez notre IA pour générer un plan à partir de votre vision. Collaborez avec des designers en temps réel pour peaufiner chaque détail.","cta":"Commencer la planification →","imgAlt":"Plan architectural étalé sur un bureau"},"2": {"title":"Engager des professionnels","description":"Parcourez des entrepreneurs vérifiés avec des notes d'autres constructeurs de la diaspora. Éliminez les intermédiaires et faites confiance à des vérifications rigoureuses.","cta":"Parcourir les entrepreneurs →","imgAlt":"Ingénieur vérifié sur un chantier"},"3": {"title":"Financement en séquestre","description":"Votre argent est en sécurité. Nous ne libérons les fonds que lorsque les jalons sont inspectés et approuvés.","cta":"Comment fonctionne le séquestre →","imgAlt":"Écran de téléphone montrant paiement confirmé"},"4": {"title":"Inspection à distance","description":"Recevez des mises à jour vidéo hebdomadaires en HD pendant que des rapports de qualité générés par l'IA sont livrés à votre tableau de bord.","cta":"Voir un exemple →","imgAlt":"Main tenant un téléphone pour inspecter une maison"},"5": {"title":"Fournitures premium","description":"Accédez à un catalogue soigné de matériaux de construction de haute qualité. Du bois durable aux finitions de luxe, nous éliminons la marge excessive.","cta":"Parcourir les matériaux →","imgAlt":"Showroom de matériaux modernes"}}},
 

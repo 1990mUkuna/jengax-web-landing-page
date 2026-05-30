@@ -8,7 +8,41 @@
 
   "features": {"header": {"title":"Um ecossistema completo para a construção moderna.","subtitle":"Ferramentas projetadas para transparência, velocidade e controle de qualidade."},"items": {"collaborative": {"tag":"Melhor recurso","title":"Carrinho Colaborativo de Materiais","description":"Os empreiteiros listam o que precisam; você paga os fornecedores diretamente a preços de atacado. Elimine intermediários e garanta materiais de qualidade no seu canteiro.","cta":"Explorar Carrinho →"},"verified": {"title":"Trabalhadores Verificados","description":"Cada profissional passa por uma verificação em 3 níveis e avaliação técnica."},"escrow": {"title":"Escrow por Marcos","description":"Os pagamentos são bloqueados em escrow e só são liberados quando você aprova."},"siteAnalyzer": {"title":"Analisador de Obra IA","description":"Nossa IA analisa feeds de vídeo para detectar falhas estruturais antes de serem cobertas por concreto."},"designPreview": {"title":"Pré-visualização de Design IA","description":"Visualize mudanças interiores instantaneamente usando IA generativa adaptada às dimensões reais do seu local."}},"collective": {"title":"Coletivo Jenga","description":"Junte-se a uma comunidade de milhares de construtores da diáspora compartilhando dicas, avaliações de fornecedores e insights locais.","cta":"Juntar-se ao Coletivo"}},
 
-  "markets": {"title":"Onde construímos.","subtitle":"Conectando a diáspora aos corredores africanos de crescimento mais rápido.","list": {"drc":"RDC","angola":"Angola","belgium":"Bélgica","france":"França","uk":"Reino Unido","canada":"Canadá","usa":"EUA","southAfrica":"África do Sul"}},
+  "markets": {
+    "title": "Onde construímos.",
+    "subtitle": "Conectando a diáspora aos corredores africanos de crescimento mais rápido.",
+    "list": {"drc":"RDC","angola":"Angola","belgium":"Bélgica","france":"França","uk":"Reino Unido","canada":"Canadá","usa":"EUA","southAfrica":"África do Sul"},
+    "hero": {
+      "pill": "Alcance Global",
+      "title": "Conectando a Diáspora<br />à Terra Natal.",
+      "subtitle": "Aproximamos a distância entre seus sonhos e seu legado. Gestão de construção segura, transparente e verificada nos corredores africanos mais dinâmicos.",
+      "actions": {"explore": "Explorar Mercados","watch": "Ver história do corredor"}
+    },
+    "corridors": {
+      "header": {"title": "Corredores em Destaque","sub": "Nossas redes mais profundas, pensadas para sua tranquilidade."},
+      "stats": {"topMaterials":"Principais materiais","avgLeadTime":"Prazo médio","trustScore":"Pontuação de confiança"},
+      "activeProjectsLabel": "Projetos ativos",
+      "0": {"country":"República Democrática do Congo","title":"O Corredor Kinshasa–Goma","subtitle":"Atendendo mais de 1,5 milhão de membros da diáspora na Europa e América do Norte.","stats": ["Concreto, Madeira","14 semanas","4.9 ⭐"],"activeProjects":"456+","cta":"Ver Catálogo RDC"},
+      "1": {"country":"Angola","title":"A Metrópole de Luanda","subtitle":"Um mercado em rápida expansão com alta demanda da diáspora lusófona.","stats": ["Aço, Vidro","12 semanas","4.8 ⭐"],"activeProjects":"280+","cta":"Explorar Oportunidades em Luanda"}
+    },
+    "network": {"title":"Nossa Rede de Suporte Global","subtitle":"Estamos onde você está. Nossos hubs operacionais nos principais centros da diáspora garantem comunicação fluida e segurança financeira para seus projetos em casa.","activeHubLabel":"Hub ativo","connectCta":"Contato com escritório local →"},
+    "hubs": {
+      "0": {"city":"Bruxelas, Bélgica","desc":"Hub central para nossa comunidade da diáspora da Europa Ocidental e processamento financeiro."},
+      "1": {"city":"Paris, França","desc":"Atendendo a diáspora africana francófona com suporte financeiro e consultoria de investimentos."},
+      "2": {"city":"Londres, Reino Unido","desc":"Operações estratégicas para nossos mercados anglófonos e padrões globais de conformidade."},
+      "3": {"city":"Toronto, Canadá","desc":"Canal direto para a diáspora norte-americana construindo na África Central e Ocidental."},
+      "4": {"city":"Atlanta, EUA","desc":"Nossa sede nos EUA gerenciando parcerias tecnológicas e relações com investidores."},
+      "5": {"city":"Joanesburgo, África do Sul","desc":"Hub regional de logística e aquisição de materiais para a África Austral e Central."}
+    },
+    "vetting": {
+      "0": {"title":"Processo rigoroso de seleção","desc":"Cada construtor passa por uma inspeção de 45 pontos, incluindo solvência financeira, qualidade de projetos anteriores e conformidade regulatória."},
+      "1": {"title":"Aquisição de materiais","desc":"Adquirimos materiais em grande quantidade diretamente de fornecedores verificados para garantir disponibilidade e estabilidade de preços em mercados voláteis."},
+      "2": {"title":"Conformidade legal","desc":"Nossas equipes jurídicas locais gerenciam títulos de terra e alvarás de construção para que você não precise navegar pela burocracia sozinho."}
+    },
+    "masters": {"tag":"EXCELÊNCIA VERIFICADA","title":"Construindo com Mestres Locais","visualText":"Construtores verificados no local","exampleName":"Jean-Pierre M.","exampleRole":"Construtor verificado · Kinshasa","verified":"Verificado"},
+    "cta": {"title":"Construa seu legado em <span>Kinshasa.</span>","subtitle":"Dê o primeiro passo em direção ao seu projeto na terra natal. Junte-se a mais de 5.000 membros da diáspora que confiam na Jenga‑X.","actions": {"getStarted":"Começar agora","schedule":"Agendar uma consulta"}},
+    "footer": {"tagline":"O lar moderno para a diáspora global que constrói em casa.","marketsTitle":"Mercados","marketsList":["RDC Congo","Angola","Nigéria","Quênia"],"companyTitle":"Empresa","companyList":["Sobre nós","Carreiras","Fale conosco","Política de Privacidade"],"supportTitle":"Suporte","supportList":["Central de Ajuda","Termos de Serviço","Central de Segurança","Portal do Construtor"],"copy":"© 2024 Jenga‑X. Construa. De qualquer lugar.","locale":"🌐 Português | 💶 EUR"}
+  },
 
   "howItWorks": {"header": {"title":"Construir deve parecer progresso, não estresse.","subtitle":"Cinco etapas simples para o seu projeto dos sonhos. Gerencie cada etapa de qualquer lugar do mundo."},"stepLabel":"ETAPA","steps": {"1": {"title":"Planejar & Projetar","description":"Carregue desenhos ou use nossa IA para gerar uma planta a partir da sua visão. Colabore com designers em tempo real para aperfeiçoar cada detalhe.","cta":"Começar planejamento →","imgAlt":"Planta arquitetônica sobre uma mesa"},"2": {"title":"Contratar Verificados","description":"Navegue por empreiteiros verificados com avaliações de outros construtores da diáspora. Elimine intermediários e confie em verificações rigorosas.","cta":"Procurar empreiteiros →","imgAlt":"Engenheiro verificado num canteiro"},"3": {"title":"Financiar em Escrow","description":"Seu dinheiro está seguro. Só liberamos fundos quando os marcos são inspecionados e aprovados.","cta":"Como funciona o escrow →","imgAlt":"Tela de telefone mostrando pagamento confirmado"},"4": {"title":"Inspeção Remota","description":"Receba atualizações semanais em vídeo HD enquanto relatórios de qualidade impulsionados por IA são entregues ao seu painel.","cta":"Ver resultado de exemplo →","imgAlt":"Mão segurando telefone para inspecionar uma casa"},"5": {"title":"Suprimentos Premium","description":"Acesse um catálogo selecionado de materiais de alta qualidade. De madeira sustentável a acabamentos de luxo, eliminamos a margem extra."}}},
 
