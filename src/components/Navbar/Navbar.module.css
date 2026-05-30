@@ -89,6 +89,17 @@
   border-radius: 2px;
 }
 
+.langBtn {
+  margin-left: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 6px;
+  border-radius: 6px;
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;

@@ -10,10 +10,19 @@ export function useI18n() { return useContext(I18nContext) }
 
 export default function I18nProvider({ children }) {
   const [locale, setLocale] = useState(() => localStorage.getItem('jengax_locale') || 'en')
+  const [modalVisible, setModalVisible] = useState(() => !localStorage.getItem('jengax_locale'))
 
   useEffect(() => {
     localStorage.setItem('jengax_locale', locale)
   }, [locale])
+
+  const showLocaleModal = () => setModalVisible(true)
+  const hideLocaleModal = () => setModalVisible(false)
+  const chooseLocale = (loc) => {
+    setLocale(loc)
+    localStorage.setItem('jengax_locale', loc)
+    setModalVisible(false)
+  }
 
   const t = (path) => {
     const parts = path.split('.')
@@ -26,9 +35,9 @@ export default function I18nProvider({ children }) {
   }
 
   return (
-    <I18nContext.Provider value={{ locale, setLocale, t }}>
+    <I18nContext.Provider value={{ locale, setLocale, t, showLocaleModal, hideLocaleModal }}>
       {children}
-      <LocaleModal />
+      <LocaleModal visible={modalVisible} onClose={hideLocaleModal} onChoose={chooseLocale} />
     </I18nContext.Provider>
   )
 }
