@@ -101,6 +101,11 @@ export default function MarketsPage() {
     { icon: <IconFile />, title: t('markets.vetting.2.title'), desc: t('markets.vetting.2.desc') },
   ]
 
+  // Defensive: translations may be missing for some locales — ensure arrays before mapping
+  const footerMarketsList = Array.isArray(t('markets.footer.marketsList')) ? t('markets.footer.marketsList') : []
+  const footerCompanyList = Array.isArray(t('markets.footer.companyList')) ? t('markets.footer.companyList') : []
+  const footerSupportList = Array.isArray(t('markets.footer.supportList')) ? t('markets.footer.supportList') : []
+
   return (
     <>
       {/* Hero */}
@@ -254,19 +259,19 @@ export default function MarketsPage() {
               <div className={styles.mFooterCol}>
                 <h4 className={styles.mColTitle}>{t('markets.footer.marketsTitle')}</h4>
                 <ul className={styles.mColLinks}>
-                  {t('markets.footer.marketsList').map(l => <li key={l}><a href="#">{l}</a></li>)}
+                  {footerMarketsList.map(l => <li key={l}><a href="#">{l}</a></li>)}
                 </ul>
               </div>
               <div className={styles.mFooterCol}>
                 <h4 className={styles.mColTitle}>{t('markets.footer.companyTitle')}</h4>
                 <ul className={styles.mColLinks}>
-                  {t('markets.footer.companyList').map(l => <li key={l}><a href="#">{l}</a></li>)}
+                  {footerCompanyList.map(l => <li key={l}><a href="#">{l}</a></li>)}
                 </ul>
               </div>
               <div className={styles.mFooterCol}>
                 <h4 className={styles.mColTitle}>{t('markets.footer.supportTitle')}</h4>
                 <ul className={styles.mColLinks}>
-                  {t('markets.footer.supportList').map(l => <li key={l}><a href="#">{l}</a></li>)}
+                  {footerSupportList.map(l => <li key={l}><a href="#">{l}</a></li>)}
                 </ul>
               </div>
             </div>
