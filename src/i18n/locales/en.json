@@ -1,0 +1,97 @@
+{
+  "nav": {"howItWorks":"How it works","features":"Features","markets":"Markets","downloadApp":"Download App"},
+  "hero": {"headline_line1":"Your home. Built right.","headline_line2":"From anywhere in","headline_line3":"the world.","subtext":"The construction marketplace for the African diaspora to build with trust. Manage milestones, payments, and site progress in real-time.","appStore":"App Store","googlePlay":"Google Play","freeNote":"Free to download · iOS & Android"},
+  "footer": {"company":"Company","support":"Support","connect":"Connect","careers":"Careers","press":"Press","partners":"Partners","contact":"Contact Us","help":"Help Center","privacy":"Privacy Policy","tagline":"Build it. From anywhere.","copy":"© 2024 Jenga-X. All rights reserved.","terms":"Terms of Service"},
+  "cta": {"title":"Ready to break ground?","subtitle":"Join 5,000+ diaspora members building their legacy with Jenga‑X. Start your first project milestone today.","appStoreSmall":"App Store","getItOn":"Get it On","downloadNow":"Download Now","googlePlay":"Google Play"},
+
+  "stats": {
+    "diaspora": "Diaspora",
+    "remittances": "Remittances",
+    "verifiedWorkers": "Verified Workers",
+    "countries": "Countries"
+  },
+
+  "features": {
+    "header": {"title":"A complete ecosystem for modern construction.","subtitle":"Tools designed for transparency, speed, and quality control."},
+    "items": {
+      "collaborative": {"tag":"Cleanest Feature","title":"Collaborative Material Cart","description":"Contractors list what they need; you pay the suppliers directly at wholesale prices. Eliminate the \"markup\" middlemen and ensure only quality materials touch your site.","cta":"Explore the Cart →"},
+      "verified": {"title":"Verified Workers","description":"Every professional undergoes a 3-tier background check and technical skill assessment."},
+      "escrow": {"title":"Milestone Escrow","description":"Payments are locked in escrow and only released when you hit the \"Approve\" button."},
+      "siteAnalyzer": {"title":"AI Site Analyser","description":"Our AI scans video feeds to detect structural flaws before they are covered by concrete."},
+      "designPreview": {"title":"AI Design Preview","description":"Visualise interior changes instantly using generative AI mapped to your real site dimensions."}
+    },
+    "collective": {"title":"Jenga Collective","description":"Join a community of thousands of diaspora builders sharing tips, supplier reviews, and local insights.","cta":"Join Collective"}
+  },
+
+  "markets": {
+    "title":"Where we build.",
+    "subtitle":"Connecting the diaspora with Africa's fastest-growing corridors.",
+    "list": {
+      "drc":"DRC",
+      "angola":"Angola",
+      "belgium":"Belgium",
+      "france":"France",
+      "uk":"UK",
+      "canada":"Canada",
+      "usa":"USA",
+      "southAfrica":"South Africa"
+    },
+    "hero": {
+      "pill": "Global Reach",
+      "title": "Connecting the Diaspora<br />to the Homeland.",
+      "subtitle": "We bridge the distance between your dreams and your legacy. Secure, transparent, and verified construction management across the most dynamic African corridors.",
+      "actions": {"explore": "Explore Markets","watch": "Watch Corridor Story"}
+    },
+    "corridors": {
+      "header": {"title": "Featured Corridors","sub":"Our deepest networks, curated for your peace of mind."},
+      "stats": {"topMaterials":"Top Materials","avgLeadTime":"Avg. Lead Time","trustScore":"Trust Score"},
+      "activeProjectsLabel":"Active Projects",
+      "0": {"country":"Democratic Republic of Congo","title":"The Kinshasa–Goma Corridor","subtitle":"Serving over 1.5m diaspora members across Europe and North America.","stats": ["Concrete, Timber","14 Weeks","4.9 ⭐"],"activeProjects":"456+","cta":"View DRC Build Catalog"},
+      "1": {"country":"Angola","title":"The Luanda Metropolitan","subtitle":"A rapidly expanding market with high demand from the Lusophone diaspora.","stats": ["Steel, Glass","12 Weeks","4.8 ⭐"],"activeProjects":"280+","cta":"Explore Luanda Opportunities"}
+    },
+    "network": {"title":"Our Global Support Network","subtitle":"We meet you where you are. Our operational hubs in major diaspora centers ensure smooth communication and financial security for your projects back home.","activeHubLabel":"Active Hub","connectCta":"Connect with Local Office →"},
+    "hubs": {
+      "0": {"city":"Brussels, Belgium","desc":"Central hub for our Western European diaspora community and financial processing."},
+      "1": {"city":"Paris, France","desc":"Serving the Francophone African diaspora with financial support and investment advisory."},
+      "2": {"city":"London, UK","desc":"Strategic operations for our Anglophone markets and global compliance standards."},
+      "3": {"city":"Toronto, Canada","desc":"Direct channel for North American diaspora building in Central and West Africa."},
+      "4": {"city":"Atlanta, USA","desc":"Our US headquarters managing technology partnerships and investor relations."},
+      "5": {"city":"Johannesburg, SA","desc":"Regional logistics and procurement hub for materials across Southern and Central Africa."}
+    },
+    "vetting": {
+      "0": {"title":"Strict Vetting Process","desc":"Every builder undergoes a 45-point inspection, including financial solvency, past project quality, and regulatory compliance."},
+      "1": {"title":"Material Procurement","desc":"We source bulk materials directly from verified suppliers to ensure availability and price stability in volatile markets."},
+      "2": {"title":"Legal Compliance","desc":"Our local legal teams manage land titles and building permits so you don't have to navigate the bureaucracy alone."}
+    },
+    "masters": {"tag":"VERIFIED EXCELLENCE","title":"Building with Local Masters","visualText":"Verified builders on site","exampleName":"Jean-Pierre M.","exampleRole":"Verified Builder · Kinshasa","verified":"Verified"},
+    "cta": {"title":"Build your legacy in <span>Kinshasa.</span>","subtitle":"Take the first step towards your homeland project today. Join 5,000+ diaspora members who trust Jenga‑X.","actions": {"getStarted":"Get Started Now","schedule":"Schedule a Consultation"}},
+    "footer": {"tagline":"The modern hearth for the global diaspora building back home.","marketsTitle":"Markets","marketsList":["DRC Congo","Angola","Nigeria","Kenya"],"companyTitle":"Company","companyList":["About Us","Careers","Contact Us","Privacy Policy"],"supportTitle":"Support","supportList":["Help Center","Terms of Service","Safety Center","Builder Portal"],"copy":"© 2024 Jenga‑X. Build it. From anywhere.","locale":"🌐 English | 💵 USD"}
+  },
+
+  "howItWorks": {
+    "header": {"title":"Building should feel like progress, not stress.","subtitle":"Five simple steps to your dream project. Manage every step from anywhere in the world."},
+    "stepLabel": "STEP",
+    "steps": {
+      "1": {"title":"Plan & Design","description":"Upload architectural drawings or use our AI to generate a blueprint from your vision. Collaborate with designers in real-time to perfect every detail before the first brick is laid.","cta":"Start planning →","imgAlt":"Architectural blueprint spread on a desk"},
+      "2": {"title":"Hire Verified","description":"Browse verified contractors with ratings from other diaspora builders. Eliminate the \"markup\" middlemen and trust in rigorous background checks and skill assessments. No more ghosting.","cta":"Browse contractors →","imgAlt":"Verified engineer standing at a construction site"},
+      "3": {"title":"Fund Escrow","description":"Your money is safe. We only release funds when milestones are inspected and approved. Our secure escrow system protects your investment in concrete at every stage of construction.","cta":"How we escrow →","imgAlt":"Phone screen showing payment confirmed in escrow"},
+      "4": {"title":"Remote Inspection","description":"Get weekly HD video updates while AI-driven quality reports are delivered to your dashboard. Monitor progress from anywhere in the world and approve milestones with confidence.","cta":"View sample result →","imgAlt":"Hand holding phone to inspect a house remotely"},
+      "5": {"title":"Premium Supplies","description":"Access a curated catalogue of high-quality building materials. From sustainable timber to luxury finishes, we eliminate the markup and ensure only the best materials reach your site at wholesale prices.","cta":"Browse materials →","imgAlt":"Modern building materials showroom with timber shelves and material samples"}
+    }
+  },
+
+  "featuresPage": {
+    "hero": {"pill":"Built for the Diaspora","title":"Tools for a <em>New Legacy.</em>","subtitle":"Bridging global professional standards with local craftsmanship. Build with precision, trust, and cultural warmth from anywhere in the world.","getStarted":"Get Started","watchStory":"Watch Story"},
+    "transformation": {"title":"The Transformation Suite","subtitle":"Witness how our precision tools turn ambitious visions into breathtaking realities. From site analysis to material delivery, Jenga‑X is your digital bridge to construction excellence."},
+    "toggle": {"before":"Before","after":"After"},
+    "beforeLabel":"BEFORE","afterLabel":"AFTER",
+    "projects": {
+      "culinaryCraft": {"title":"Culinary Craft","feature":"Material Cart","description":"Using our Material Cart, this emerald kitchen was outfitted with premium fixtures delivered direct-to-site, saving 15% on logistics."},
+      "sanctuaryBuilt": {"title":"Sanctuary Built","feature":"AI Site Analyser","description":"AI Site Analyser identified structural plumbing risks early, ensuring this marble finish stands on a foundation of technical perfection."},
+      "heritageHaven": {"title":"Heritage Haven","feature":"AI Design Preview","description":"Prototyped via AI Design Preview, this garden blends tropical lushness with modern entertainment spaces seamlessly."}
+    },
+    "precision": {"title":"Precision Engineering for Every Milestone","subtitle":"Five core modules designed to eliminate uncertainty and empower your build journey from afar."},
+    "bento": {"analysisTag":"ANALYSIS","aiSite":{"title":"AI Site Analyser","desc":"Real-time flaw detection via high-fidelity video feeds. Our neural engine spots structural inconsistencies before they become costly errors.","cta":"Learn More →"},"cart":{"title":"Collaborative Material Cart","desc":"Access wholesale pricing and transparent supply chains. Direct-to-site delivery with GPS tracking and automated inventory updates.","cta":"Explore Marketplace →"},"securityTag":"SECURITY","escrow":{"title":"Milestone Escrow","desc":"Funds are held in secure escrow and only released after site inspections verify milestone completion."},"visualTag":"VISUALIZATION","design":{"title":"AI Design Preview","desc":"Map high-end interior changes onto your real site using augmented reality before buying a single tile."},"communityTag":"COMMUNITY","collective":{"title":"Jenga Collective","desc":"Pooled investments for the diaspora. Join forces with others to develop premium projects and share in the equity."}},
+    "cta": {"title":"Start your transformation.","subtitle":"Download the Jenga‑X app today and take the first step toward building your legacy with confidence.","appStoreSmall":"Download on the","appStore":"App Store","getItOn":"Get it On","googlePlay":"Google Play"}
+  }
+}

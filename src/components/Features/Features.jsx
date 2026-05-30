@@ -1,4 +1,5 @@
 import styles from './Features.module.css'
+import { useI18n } from '../../i18n/I18nProvider'
 
 const IconCart = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -42,62 +43,58 @@ const IconUsers = () => (
   </svg>
 )
 
-const FEATURES = [
-  {
-    icon: <IconCart />,
-    tag: 'Cleanest Feature',
-    title: 'Collaborative Material Cart',
-    description:
-      'Contractors list what they need; you pay the suppliers directly at wholesale prices. Eliminate the "markup" middlemen and ensure only quality materials touch your site.',
-    cta: 'Explore the Cart →',
-    featured: true,
-    span: 'wide',
-  },
-  {
-    icon: <IconShield />,
-    title: 'Verified Workers',
-    description:
-      'Every professional undergoes a 3-tier background check and technical skill assessment.',
-    featured: false,
-  },
-  {
-    icon: <IconLock />,
-    title: 'Milestone Escrow',
-    description:
-      'Payments are locked in escrow and only released when you hit the "Approve" button.',
-    featured: false,
-  },
-  {
-    icon: <IconCamera />,
-    title: 'AI Site Analyser',
-    description:
-      'Our AI scans video feeds to detect structural flaws before they are covered by concrete.',
-    featured: false,
-  },
-  {
-    icon: <IconPen />,
-    title: 'AI Design Preview',
-    description:
-      'Visualise interior changes instantly using generative AI mapped to your real site dimensions.',
-    featured: false,
-  },
-]
-
-const COLLECTIVE = {
-  icon: <IconUsers />,
-  title: 'Jenga Collective',
-  description:
-    'Join a community of thousands of diaspora builders sharing tips, supplier reviews, and local insights.',
-  cta: 'Join Collective',
-}
-
 export default function Features() {
+  const { t } = useI18n()
+
+  const FEATURES = [
+    {
+      icon: <IconCart />,
+      tag: t('features.items.collaborative.tag'),
+      title: t('features.items.collaborative.title'),
+      description: t('features.items.collaborative.description'),
+      cta: t('features.items.collaborative.cta'),
+      featured: true,
+      span: 'wide',
+    },
+    {
+      icon: <IconShield />,
+      title: t('features.items.verified.title'),
+      description: t('features.items.verified.description'),
+      featured: false,
+    },
+    {
+      icon: <IconLock />,
+      title: t('features.items.escrow.title'),
+      description: t('features.items.escrow.description'),
+      featured: false,
+    },
+    {
+      icon: <IconCamera />,
+      title: t('features.items.siteAnalyzer.title'),
+      description: t('features.items.siteAnalyzer.description'),
+      featured: false,
+    },
+    {
+      icon: <IconPen />,
+      title: t('features.items.designPreview.title'),
+      description: t('features.items.designPreview.description'),
+      featured: false,
+    },
+  ]
+
+  const COLLECTIVE = {
+    icon: <IconUsers />,
+    title: t('features.collective.title'),
+    description: t('features.collective.description'),
+    cta: t('features.collective.cta'),
+  }
+
   return (
     <section className={styles.section} id="features">
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>A complete ecosystem for modern construction.</h2>
-          <p className={styles.subtitle}>Tools designed for transparency, speed, and quality control.</p>
+          <h2 className={styles.title}>{t('features.header.title')}</h2>
+          <p className={styles.subtitle}>{t('features.header.subtitle')}</p>
         </div>
 
         <div className={styles.grid}>

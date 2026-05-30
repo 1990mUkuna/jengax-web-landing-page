@@ -1,24 +1,26 @@
 import styles from './Footer.module.css'
-
-const LINKS = {
-  Company: [
-    { label: 'Careers', href: '#' },
-    { label: 'Press', href: '#' },
-    { label: 'Partners', href: '#' },
-  ],
-  Support: [
-    { label: 'Contact Us', href: '#' },
-    { label: 'Help Center', href: '#' },
-    { label: 'Privacy Policy', href: '#' },
-  ],
-  Connect: [
-    { label: 'LinkedIn', href: '#' },
-    { label: 'Instagram', href: '#' },
-    { label: 'Twitter', href: '#' },
-  ],
-}
+import { useI18n } from '../../i18n/I18nProvider'
 
 export default function Footer() {
+  const { t } = useI18n()
+  const LINKS = {
+    [t('footer.company')]: [
+      { label: t('footer.careers'), href: '#' },
+      { label: t('footer.press'), href: '#' },
+      { label: t('footer.partners'), href: '#' },
+    ],
+    [t('footer.support')]: [
+      { label: t('footer.contact'), href: '#' },
+      { label: t('footer.help'), href: '#' },
+      { label: t('footer.privacy'), href: '#' },
+    ],
+    [t('footer.connect')]: [
+      { label: 'LinkedIn', href: '#' },
+      { label: 'Instagram', href: '#' },
+      { label: 'Twitter', href: '#' },
+    ],
+  }
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -27,7 +29,7 @@ export default function Footer() {
             <span className={styles.logo}>
               Jenga<span>-X</span>
             </span>
-            <p className={styles.tagline}>Build it. From anywhere.</p>
+            <p className={styles.tagline}>{t('footer.tagline')}</p>
           </div>
 
           <div className={styles.columns}>
@@ -47,10 +49,10 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p className={styles.copy}>&copy; 2024 Jenga-X. All rights reserved.</p>
+          <p className={styles.copy}>{t('footer.copy')}</p>
           <div className={styles.legal}>
-            <a href="#" className={styles.legalLink}>Terms of Service</a>
-            <a href="#" className={styles.legalLink}>Privacy Policy</a>
+            <a href="#" className={styles.legalLink}>{t('footer.terms')}</a>
+            <a href="#" className={styles.legalLink}>{t('footer.privacy')}</a>
           </div>
         </div>
       </div>

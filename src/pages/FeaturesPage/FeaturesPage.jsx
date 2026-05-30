@@ -4,6 +4,7 @@ import toiletImg from '../../assets/toilet_img_before_after.png'
 import gardenImg from '../../assets/garden_img_before_after.png'
 import Footer from '../../components/Footer/Footer'
 import styles from './FeaturesPage.module.css'
+import { useI18n } from '../../i18n/I18nProvider'
 
 // ─── Icons ───────────────────────────────────────────────────────────────────
 
@@ -45,57 +46,53 @@ const IconUsers = () => (
 
 // ─── Transformation Suite ─────────────────────────────────────────────────────
 
-const PROJECTS = [
+const PROJECTS_RAW = [
   {
     img: kitchenImg,
-    title: 'Culinary Craft',
-    feature: 'Material Cart',
-    description:
-      'Using our Material Cart, this emerald kitchen was outfitted with premium fixtures delivered direct-to-site, saving 15% on logistics.',
+    key: 'features.projects.culinaryCraft',
+    featureKey: 'features.projects.culinaryCraft.feature',
+    descKey: 'features.projects.culinaryCraft.description',
   },
   {
     img: toiletImg,
-    title: 'Sanctuary Built',
-    feature: 'AI Site Analyser',
-    description:
-      'AI Site Analyser identified structural plumbing risks early, ensuring this marble finish stands on a foundation of technical perfection.',
+    key: 'features.projects.sanctuaryBuilt',
+    featureKey: 'features.projects.sanctuaryBuilt.feature',
+    descKey: 'features.projects.sanctuaryBuilt.description',
   },
   {
     img: gardenImg,
-    title: 'Heritage Haven',
-    feature: 'AI Design Preview',
-    description:
-      'Prototyped via AI Design Preview, this garden blends tropical lushness with modern entertainment spaces seamlessly.',
+    key: 'features.projects.heritageHaven',
+    featureKey: 'features.projects.heritageHaven.feature',
+    descKey: 'features.projects.heritageHaven.description',
   },
 ]
 
 function TransformationSuite() {
   const [mode, setMode] = useState('after')
+  const { t } = useI18n()
+
+  const PROJECTS = PROJECTS_RAW.map(p => ({ img: p.img, title: t(`${p.key}.title`), feature: t(p.featureKey), description: t(p.descKey) }))
 
   return (
     <section className={styles.suite}>
       <div className={styles.container}>
         <div className={styles.suiteHeader}>
           <div>
-            <h2 className={styles.sectionTitle}>The Transformation Suite</h2>
-            <p className={styles.sectionSub}>
-              Witness how our precision tools turn ambitious visions into breathtaking
-              realities. From site analysis to material delivery, Jenga‑X is your digital
-              bridge to construction excellence.
-            </p>
+            <h2 className={styles.sectionTitle}>{t('featuresPage.transformation.title')}</h2>
+            <p className={styles.sectionSub}>{t('featuresPage.transformation.subtitle')}</p>
           </div>
           <div className={styles.toggle}>
             <button
               className={`${styles.toggleBtn} ${mode === 'before' ? styles.toggleActive : ''}`}
               onClick={() => setMode('before')}
             >
-              Before
+              {t('featuresPage.toggle.before')}
             </button>
             <button
               className={`${styles.toggleBtn} ${mode === 'after' ? styles.toggleActive : ''}`}
               onClick={() => setMode('after')}
             >
-              After
+              {t('featuresPage.toggle.after')}
             </button>
           </div>
         </div>
@@ -112,7 +109,7 @@ function TransformationSuite() {
                     objectPosition: mode === 'before' ? 'left center' : 'right center',
                   }}
                 />
-                <span className={styles.imgLabel}>{mode === 'before' ? 'BEFORE' : 'AFTER'}</span>
+                <span className={styles.imgLabel}>{mode === 'before' ? t('featuresPage.beforeLabel') : t('featuresPage.afterLabel')}</span>
               </div>
               <div className={styles.projectInfo}>
                 <h3 className={styles.projectTitle}>{title}</h3>
@@ -129,66 +126,55 @@ function TransformationSuite() {
 // ─── Precision Engineering ────────────────────────────────────────────────────
 
 function PrecisionEngineering() {
+  const { t } = useI18n()
   return (
     <section className={styles.precision}>
       <div className={styles.container}>
         <div className={styles.precisionHeader}>
-          <h2 className={styles.sectionTitleCenter}>Precision Engineering for Every Milestone</h2>
-          <p className={styles.sectionSubCenter}>
-            Five core modules designed to eliminate uncertainty and empower your build journey from afar.
-          </p>
+          <h2 className={styles.sectionTitleCenter}>{t('featuresPage.precision.title')}</h2>
+          <p className={styles.sectionSubCenter}>{t('featuresPage.precision.subtitle')}</p>
         </div>
 
         <div className={styles.bentoGrid}>
           {/* AI Site Analyser — spans 2 rows */}
           <div className={`${styles.bentoCard} ${styles.aiSite}`}>
-            <div className={styles.bentoTag}>ANALYSIS</div>
+            <div className={styles.bentoTag}>{t('featuresPage.bento.analysisTag')}</div>
             <div className={styles.bentoIcon}><IconCamera /></div>
-            <h3 className={styles.bentoTitle}>AI Site Analyser</h3>
-            <p className={styles.bentoDesc}>
-              Real-time flaw detection via high-fidelity video feeds. Our neural engine spots structural inconsistencies before they become costly errors.
-            </p>
-            <a href="#" className={styles.bentoCta}>Learn More →</a>
+            <h3 className={styles.bentoTitle}>{t('featuresPage.bento.aiSite.title')}</h3>
+            <p className={styles.bentoDesc}>{t('featuresPage.bento.aiSite.desc')}</p>
+            <a href="#" className={styles.bentoCta}>{t('featuresPage.bento.aiSite.cta')}</a>
           </div>
 
           {/* Collaborative Material Cart — dark, spans 3 cols */}
           <div className={`${styles.bentoCard} ${styles.materialCart} ${styles.bentoDark}`}>
             <div className={styles.bentoIconDark}><IconCart /></div>
-            <h3 className={styles.bentoTitleLight}>Collaborative Material Cart</h3>
-            <p className={styles.bentoDescLight}>
-              Access wholesale pricing and transparent supply chains. Direct-to-site delivery with GPS tracking and automated inventory updates.
-            </p>
-            <a href="#" className={styles.bentoCtaLight}>Explore Marketplace →</a>
+            <h3 className={styles.bentoTitleLight}>{t('featuresPage.bento.cart.title')}</h3>
+            <p className={styles.bentoDescLight}>{t('featuresPage.bento.cart.desc')}</p>
+            <a href="#" className={styles.bentoCtaLight}>{t('featuresPage.bento.cart.cta')}</a>
           </div>
 
           {/* Milestone Escrow */}
           <div className={`${styles.bentoCard} ${styles.escrow}`}>
-            <div className={styles.bentoTag}>SECURITY</div>
+            <div className={styles.bentoTag}>{t('featuresPage.bento.securityTag')}</div>
             <div className={styles.bentoIcon}><IconLock /></div>
-            <h3 className={styles.bentoTitle}>Milestone Escrow</h3>
-            <p className={styles.bentoDesc}>
-              Funds are held in secure escrow and only released after site inspections verify milestone completion.
-            </p>
+            <h3 className={styles.bentoTitle}>{t('featuresPage.bento.escrow.title')}</h3>
+            <p className={styles.bentoDesc}>{t('featuresPage.bento.escrow.desc')}</p>
           </div>
 
           {/* AI Design Preview */}
           <div className={`${styles.bentoCard} ${styles.aiDesign}`}>
-            <div className={styles.bentoTag}>VISUALIZATION</div>
+            <div className={styles.bentoTag}>{t('featuresPage.bento.visualTag')}</div>
             <div className={styles.bentoIcon}><IconPen /></div>
-            <h3 className={styles.bentoTitle}>AI Design Preview</h3>
-            <p className={styles.bentoDesc}>
-              Map high-end interior changes onto your real site using augmented reality before buying a single tile.
-            </p>
+            <h3 className={styles.bentoTitle}>{t('featuresPage.bento.design.title')}</h3>
+            <p className={styles.bentoDesc}>{t('featuresPage.bento.design.desc')}</p>
           </div>
 
           {/* Jenga Collective — red */}
           <div className={`${styles.bentoCard} ${styles.collective} ${styles.bentoRed}`}>
-            <div className={styles.bentoTag} style={{ background: 'rgba(255,255,255,0.15)', color: '#fff' }}>COMMUNITY</div>
+            <div className={styles.bentoTag} style={{ background: 'rgba(255,255,255,0.15)', color: '#fff' }}>{t('featuresPage.bento.communityTag')}</div>
             <div className={styles.bentoIconDark}><IconUsers /></div>
-            <h3 className={styles.bentoTitleLight}>Jenga Collective</h3>
-            <p className={styles.bentoDescLight}>
-              Pooled investments for the diaspora. Join forces with others to develop premium projects and share in the equity.
-            </p>
+            <h3 className={styles.bentoTitleLight}>{t('featuresPage.bento.collective.title')}</h3>
+            <p className={styles.bentoDescLight}>{t('featuresPage.bento.collective.desc')}</p>
           </div>
         </div>
       </div>
@@ -199,25 +185,24 @@ function PrecisionEngineering() {
 // ─── Features CTA ─────────────────────────────────────────────────────────────
 
 function FeaturesCTA() {
+  const { t } = useI18n()
   return (
     <section className={styles.featuresCta}>
       <div className={styles.container}>
         <div className={styles.ctaCard}>
-          <h2 className={styles.ctaTitle}>Start your transformation.</h2>
-          <p className={styles.ctaSub}>
-            Download the Jenga‑X app today and take the first step toward building your legacy with confidence.
-          </p>
+          <h2 className={styles.ctaTitle}>{t('featuresPage.cta.title')}</h2>
+          <p className={styles.ctaSub}>{t('featuresPage.cta.subtitle')}</p>
           <div className={styles.ctaActions}>
             <a href="#" className={styles.ctaBtn}>
               <span className={styles.ctaBtnLabel}>
-                <small>Download on the</small>
-                App Store
+                <small>{t('featuresPage.cta.appStoreSmall')}</small>
+                {t('featuresPage.cta.appStore')}
               </span>
             </a>
             <a href="#" className={styles.ctaBtnOutline}>
               <span className={styles.ctaBtnLabel}>
-                <small>Get it on</small>
-                Google Play
+                <small>{t('featuresPage.cta.getItOn')}</small>
+                {t('featuresPage.cta.googlePlay')}
               </span>
             </a>
           </div>
@@ -230,33 +215,18 @@ function FeaturesCTA() {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function FeaturesPage() {
+  const { t } = useI18n()
   return (
     <>
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <span className={styles.pill}>Built for the Diaspora</span>
-          <h1 className={styles.heroTitle}>
-            Tools for a <em>New Legacy.</em>
-          </h1>
-          <p className={styles.heroSub}>
-            Bridging global professional standards with local craftsmanship. Build with
-            precision, trust, and cultural warmth from anywhere in the world.
-          </p>
+          <span className={styles.pill}>{t('featuresPage.hero.pill')}</span>
+          <h1 className={styles.heroTitle}>{t('featuresPage.hero.titleHtml') ? <span dangerouslySetInnerHTML={{ __html: t('featuresPage.hero.titleHtml') }} /> : t('featuresPage.hero.title')}</h1>
+          <p className={styles.heroSub}>{t('featuresPage.hero.subtitle')}</p>
           <div className={styles.heroActions}>
-            <a href="#" className={styles.heroBtnPrimary}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ marginRight: 6 }}>
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
-              Get Started
-            </a>
-            <a href="#" className={styles.heroBtnSecondary}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: 6 }}>
-                <circle cx="12" cy="12" r="10"/>
-                <polygon points="10 8 16 12 10 16 10 8"/>
-              </svg>
-              Watch Story
-            </a>
+            <a href="#" className={styles.heroBtnPrimary}>{t('featuresPage.hero.getStarted')}</a>
+            <a href="#" className={styles.heroBtnSecondary}>{t('featuresPage.hero.watchStory')}</a>
           </div>
         </div>
       </section>

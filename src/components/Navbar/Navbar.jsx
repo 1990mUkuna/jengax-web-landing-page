@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Navbar.module.css'
-
-const NAV_LINKS = [
-  { label: 'How it works', href: '/#how-it-works' },
-  { label: 'Features', to: '/features' },
-  { label: 'Markets', to: '/markets' },
-]
+import { useI18n } from '../../i18n/I18nProvider'
 
 export default function Navbar() {
+  const { t } = useI18n()
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const NAV_LINKS = [
+    { label: t('nav.howItWorks'), href: '/#how-it-works' },
+    { label: t('nav.features'), to: '/features' },
+    { label: t('nav.markets'), to: '/markets' },
+  ]
 
   return (
     <header className={styles.header}>
@@ -41,7 +43,7 @@ export default function Navbar() {
         </ul>
 
         <NavLink to="/features" className={styles.cta}>
-          Download App
+          {t('nav.downloadApp')}
         </NavLink>
 
         <button
