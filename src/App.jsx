@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 import HomePage from './pages/HomePage'
 import FeaturesPage from './pages/FeaturesPage/FeaturesPage'
 import MarketsPage from './pages/MarketsPage/MarketsPage'
+import WaitingListPage from './pages/WaitingListPage/WaitingListPage'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/markets" element={<MarketsPage />} />
+          <Route path="/waiting-list" element={<WaitingListPage />} />
         </Routes>
       </main>
     </BrowserRouter>

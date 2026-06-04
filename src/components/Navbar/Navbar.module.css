@@ -18,10 +18,21 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.5px;
   color: var(--color-text);
+  flex-shrink: 0;
+}
+
+.logoImg {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
   flex-shrink: 0;
 }
 

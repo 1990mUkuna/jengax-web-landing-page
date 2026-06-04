@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Navbar.module.css'
 import { useI18n } from '../../i18n/I18nProvider'
+import logoImg from '../../assets/jengaXLogo.png'
 
 export default function Navbar() {
   const { t, locale, showLocaleModal } = useI18n()
@@ -11,6 +12,7 @@ export default function Navbar() {
     { label: t('nav.howItWorks'), href: '/#how-it-works' },
     { label: t('nav.features'), to: '/features' },
     { label: t('nav.markets'), to: '/markets' },
+    { label: t('nav.waitingList'), to: '/waiting-list' },
   ]
 
   const FLAGS = { en: '🇬🇧', fr: '🇫🇷', pt: '🇵🇹' }
@@ -19,6 +21,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <NavLink to="/" className={styles.logo}>
+          <img src={logoImg} alt="Jenga-X" className={styles.logoImg} />
           Jenga<span>-X</span>
         </NavLink>
 

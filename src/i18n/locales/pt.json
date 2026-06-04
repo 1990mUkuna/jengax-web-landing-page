@@ -1,5 +1,5 @@
 {
-  "nav": {"howItWorks":"Como funciona","features":"Recursos","markets":"Mercados","downloadApp":"Baixar"},
+  "nav": {"howItWorks":"Como funciona","features":"Recursos","markets":"Mercados","waitingList":"Lista de espera","downloadApp":"Baixar"},
   "hero": {"headline_line1":"Sua casa. Construída com qualidade.","headline_line2":"De qualquer lugar","headline_line3":"do mundo.","subtext":"O marketplace de construção para a diáspora africana. Gerencie marcos, pagamentos e progresso do canteiro em tempo real.","appStore":"App Store","googlePlay":"Google Play","freeNote":"Grátis para baixar · iOS & Android"},
   "footer": {"company":"Empresa","support":"Suporte","connect":"Conectar","careers":"Carreiras","press":"Imprensa","partners":"Parceiros","contact":"Fale conosco","help":"Central de Ajuda","privacy":"Política de Privacidade","tagline":"Construa. De qualquer lugar.","copy":"© 2024 Jenga-X. Todos os direitos reservados.","terms":"Termos de Serviço"},
   "cta": {"title":"Pronto para começar a obra?","subtitle":"Junte-se a mais de 5.000 membros da diáspora construindo seu legado com a Jenga‑X. Inicie seu primeiro marco hoje.","appStoreSmall":"App Store","getItOn":"Get it On","downloadNow":"Baixar agora","googlePlay":"Google Play"},
@@ -44,7 +44,70 @@
     "footer": {"tagline":"O lar moderno para a diáspora global que constrói em casa.","marketsTitle":"Mercados","marketsList":["RDC Congo","Angola","Nigéria","Quênia"],"companyTitle":"Empresa","companyList":["Sobre nós","Carreiras","Fale conosco","Política de Privacidade"],"supportTitle":"Suporte","supportList":["Central de Ajuda","Termos de Serviço","Central de Segurança","Portal do Construtor"],"copy":"© 2024 Jenga‑X. Construa. De qualquer lugar.","locale":"🌐 Português | 💶 EUR"}
   },
 
-  "howItWorks": {"header": {"title":"Construir deve parecer progresso, não estresse.","subtitle":"Cinco etapas simples para o seu projeto dos sonhos. Gerencie cada etapa de qualquer lugar do mundo."},"stepLabel":"ETAPA","steps": {"1": {"title":"Planejar & Projetar","description":"Carregue desenhos ou use nossa IA para gerar uma planta a partir da sua visão. Colabore com designers em tempo real para aperfeiçoar cada detalhe.","cta":"Começar planejamento →","imgAlt":"Planta arquitetônica sobre uma mesa"},"2": {"title":"Contratar Verificados","description":"Navegue por empreiteiros verificados com avaliações de outros construtores da diáspora. Elimine intermediários e confie em verificações rigorosas.","cta":"Procurar empreiteiros →","imgAlt":"Engenheiro verificado num canteiro"},"3": {"title":"Financiar em Escrow","description":"Seu dinheiro está seguro. Só liberamos fundos quando os marcos são inspecionados e aprovados.","cta":"Como funciona o escrow →","imgAlt":"Tela de telefone mostrando pagamento confirmado"},"4": {"title":"Inspeção Remota","description":"Receba atualizações semanais em vídeo HD enquanto relatórios de qualidade impulsionados por IA são entregues ao seu painel.","cta":"Ver resultado de exemplo →","imgAlt":"Mão segurando telefone para inspecionar uma casa"},"5": {"title":"Suprimentos Premium","description":"Acesse um catálogo selecionado de materiais de alta qualidade. De madeira sustentável a acabamentos de luxo, eliminamos a margem extra."}}},
+  "howItWorks": {"header": {"title":"Construir deve parecer progresso, não estresse.","subtitle":"Cinco etapas simples para o seu projeto dos sonhos. Gerencie cada etapa de qualquer lugar do mundo."},"about":{"tag":"A PLATAFORMA","title":"Um marketplace construído sobre confiança,\nalem das fronteiras.","body":"A Jenga-X é um marketplace mobile que conecta proprietários — localmente ou do exterior — com trabalhadores de construção verificados, fornecedores de materiais e cursos profissionais. Criado para a diáspora africana e proprietários locais que constroem ou renovam na RDC e em Angola, resolvemos os três problemas fundamentais da construção: encontrar trabalhadores de confiança, controlar as compras de materiais e garantir cada pagamento.","problems":{"0":"Trabalhadores confiáveis","1":"Controle de materiais","2":"Pagamentos seguros"},"tagline":"Construído por africanos.\nPara africanos.\nDe qualquer lugar do mundo.","markets":"Ativo em 🇨🇩 RDC  ·  🇦🇴 Angola","stakeholders":{"homeowners":{"tag":"PROPRIETÁRIOS","title":"Você está no controle","desc":"Publique projetos, receba propostas competitivas, aprove cada compra de material em tempo real por um carrinho compartilhado e libere pagamentos apenas quando o trabalho for verificado."},"workers":{"tag":"TRABALHADORES","title":"Cresça com confiança","desc":"Acesse clientes de qualidade, receba pagamentos seguros por marcos e obtenha ferramentas para construir sua reputação e expandir seu negócio."},"suppliers":{"tag":"FORNECEDORES","title":"Venda sem correr atrás","desc":"Receba pedidos de materiais pré-pagos diretamente. Sem faturas não pagas, sem problemas de fluxo de caixa — cada pedido é financiado antes de chegar até você."},"ai":{"tag":"CAMADA DE IA","title":"Inteligência integrada","desc":"Nossa IA analisa fotos de cômodos para estimar dimensões, sugerir os materiais certos e gerar pré-visualizações de design — antes que o primeiro tijolo seja assentado."}}},"stepLabel":"ETAPA","steps": {"1": {"title":"Planejar & Projetar","description":"Carregue desenhos ou use nossa IA para gerar uma planta a partir da sua visão. Colabore com designers em tempo real para aperfeiçoar cada detalhe.","cta":"Começar planejamento →","imgAlt":"Planta arquitetônica sobre uma mesa"},"2": {"title":"Contratar Verificados","description":"Navegue por empreiteiros verificados com avaliações de outros construtores da diáspora. Elimine intermediários e confie em verificações rigorosas.","cta":"Procurar empreiteiros →","imgAlt":"Engenheiro verificado num canteiro"},"3": {"title":"Financiar em Escrow","description":"Seu dinheiro está seguro. Só liberamos fundos quando os marcos são inspecionados e aprovados.","cta":"Como funciona o escrow →","imgAlt":"Tela de telefone mostrando pagamento confirmado"},"4": {"title":"Inspeção Remota","description":"Receba atualizações semanais em vídeo HD enquanto relatórios de qualidade impulsionados por IA são entregues ao seu painel.","cta":"Ver resultado de exemplo →","imgAlt":"Mão segurando telefone para inspecionar uma casa"},"5": {"title":"Suprimentos Premium","description":"Acesse um catálogo selecionado de materiais de alta qualidade. De madeira sustentável a acabamentos de luxo, eliminamos a margem extra."}}},
+
+  "waitingList": {
+    "hero": {
+      "pill": "Acesso antecipado",
+      "title": "Seja o primeiro a construir<br/>com a Jenga-X.",
+      "subtitle": "Junte-se à nossa lista de espera exclusiva e obtenha acesso prioritário quando lançarmos no seu mercado. Vagas limitadas.",
+      "stats": {
+        "membersLabel": "Membros antecipados",
+        "countriesLabel": "Países",
+        "launchingLabel": "Lançamento em breve"
+      }
+    },
+    "form": {
+      "title": "Reserve sua vaga.",
+      "subtitle": "Diga-nos quem você é para personalizarmos sua experiência Jenga-X desde o primeiro dia.",
+      "categoryTitle": "Eu sou…",
+      "categories": {
+        "soloBuilder":        { "label": "Construtor solo",          "desc": "Profissional autônomo ou empreiteiro independente" },
+        "constructionCompany":{ "label": "Empresa de construção",    "desc": "Empresa de construção registrada" },
+        "homeOwner":          { "label": "Proprietário",             "desc": "Construindo ou renovando minha propriedade" },
+        "supplierShop":       { "label": "Fornecedor",               "desc": "Fornecedor de materiais de construção" }
+      },
+      "fields": {
+        "fullName":       "Nome completo",
+        "companyName":    "Nome da empresa",
+        "shopName":       "Nome da loja",
+        "contactPerson":  "Pessoa de contato",
+        "mobile":         "Número de celular",
+        "email":          "Endereço de e-mail",
+        "emailOptional":  "Endereço de e-mail (opcional)",
+        "address":        "Endereço completo",
+        "country":        "País",
+        "city":           "Cidade"
+      },
+      "placeholders": {
+        "fullName":      "ex. Jean-Pierre Mwamba",
+        "companyName":   "ex. Mwamba Construções Ltda",
+        "shopName":      "ex. Materiais Kinshasa",
+        "contactPerson": "ex. Jean-Pierre Mwamba",
+        "mobile":        "ex. +243 81 234 5678",
+        "email":         "voce@exemplo.com",
+        "address":       "ex. 12 Avenida Lumumba, Gombe",
+        "country":       "ex. RDC, Angola, Bélgica…",
+        "city":          "ex. Kinshasa"
+      },
+      "submit":        "Entrar na lista de espera",
+      "submitting":    "Enviando…",
+      "errorRequired": "Este campo é obrigatório",
+      "errorEmail":    "Digite um endereço de e-mail válido",
+      "errorGeneral":  "Algo deu errado. Por favor, tente novamente.",
+      "success": {
+        "title":    "Você está na lista!",
+        "subtitle": "Notificaremos você assim que a Jenga-X for lançada na sua área. Fique de olho na sua caixa de entrada.",
+        "back":     "Voltar ao site"
+      }
+    },
+    "benefits": {
+      "title": "Por que entrar cedo?",
+      "0": { "title": "Acesso prioritário",       "desc": "Seja um dos primeiros a usar a Jenga-X quando lançarmos no seu mercado." },
+      "1": { "title": "Tarifas de membro fundador","desc": "Garanta preços especiais disponíveis apenas para membros antecipados." },
+      "2": { "title": "Molde o produto",            "desc": "Seu feedback influencia diretamente o que construímos a seguir." }
+    }
+  },
 
   "featuresPage": {"hero": {"pill":"Construído para a Diáspora","title":"Ferramentas para um <em>Novo Legado.</em>","subtitle":"Unindo padrões profissionais globais com artesanato local. Construa com precisão, confiança e calor cultural de qualquer lugar.","getStarted":"Começar","watchStory":"Ver história"},"transformation": {"title":"A Suite de Transformação","subtitle":"Veja como nossas ferramentas de precisão transformam visões ambiciosas em realidades impressionantes."},"toggle": {"before":"Antes","after":"Depois"},"beforeLabel":"ANTES","afterLabel":"DEPOIS","projects": {"culinaryCraft": {"title":"Culinary Craft","feature":"Carrinho de Materiais","description":"Usando nosso Carrinho de Materiais, esta cozinha foi equipada com acessórios premium entregues diretamente no local, economizando 15% em logística."},"sanctuaryBuilt": {"title":"Sanctuary Built","feature":"Analisador de Obra IA","description":"O Analisador IA identificou riscos estruturais de encanamento cedo, garantindo acabamento perfeito."},"heritageHaven": {"title":"Heritage Haven","feature":"Pré-visualização de Design IA","description":"Prototipado via IA, este jardim combina vegetação tropical com espaços modernos."}},"precision": {"title":"Engenharia de Precisão para Cada Marco","subtitle":"Cinco módulos principais projetados para eliminar incertezas e capacitar sua jornada de construção."},"bento": {"analysisTag":"ANÁLISE","aiSite": {"title":"Analisador de Obra IA","desc":"Detecção de defeitos em tempo real via feeds de vídeo de alta fidelidade.","cta":"Saiba mais →"},"cart": {"title":"Carrinho Colaborativo","desc":"Acesso a preços de atacado e cadeias de suprimentos transparentes.","cta":"Explorar Marketplace →"},"securityTag":"SEGURANÇA","escrow": {"title":"Escrow por Marcos","desc":"Os fundos são mantidos em escrow e só são liberados após inspeção."},"visualTag":"VISUALIZAÇÃO","design": {"title":"Pré-visualização de Design IA","desc":"Projete mudanças internas no seu local real."},"communityTag":"COMUNIDADE","collective": {"title":"Coletivo Jenga","desc":"Investimentos agrupados para a diáspora.","cta":"Juntar-se"}},"cta": {"title":"Comece sua transformação.","subtitle":"Baixe o aplicativo Jenga‑X hoje e dê o primeiro passo para construir seu legado com confiança.","appStoreSmall":"Baixe no","appStore":"App Store","getItOn":"Get it on","googlePlay":"Google Play"}}
 }

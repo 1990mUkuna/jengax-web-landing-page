@@ -1,5 +1,5 @@
 {
-  "nav": {"howItWorks":"How it works","features":"Features","markets":"Markets","downloadApp":"Download App"},
+  "nav": {"howItWorks":"How it works","features":"Features","markets":"Markets","waitingList":"Waiting List","downloadApp":"Download App"},
   "hero": {"headline_line1":"Your home. Built right.","headline_line2":"From anywhere in","headline_line3":"the world.","subtext":"The construction marketplace for the African diaspora to build with trust. Manage milestones, payments, and site progress in real-time.","appStore":"App Store","googlePlay":"Google Play","freeNote":"Free to download · iOS & Android"},
   "footer": {"company":"Company","support":"Support","connect":"Connect","careers":"Careers","press":"Press","partners":"Partners","contact":"Contact Us","help":"Help Center","privacy":"Privacy Policy","tagline":"Build it. From anywhere.","copy":"© 2024 Jenga-X. All rights reserved.","terms":"Terms of Service"},
   "cta": {"title":"Ready to break ground?","subtitle":"Join 5,000+ diaspora members building their legacy with Jenga‑X. Start your first project milestone today.","appStoreSmall":"App Store","getItOn":"Get it On","downloadNow":"Download Now","googlePlay":"Google Play"},
@@ -70,6 +70,20 @@
 
   "howItWorks": {
     "header": {"title":"Building should feel like progress, not stress.","subtitle":"Five simple steps to your dream project. Manage every step from anywhere in the world."},
+    "about": {
+      "tag": "THE PLATFORM",
+      "title": "A marketplace built for trust,\nacross borders.",
+      "body": "Jenga-X is a mobile marketplace that connects homeowners — locally or from abroad — with verified construction workers, material suppliers and trade courses. Built for the African diaspora and local homeowners building or renovating property in DRC and Angola, we solve the three core problems of construction: finding trusted workers, controlling material purchases, and securing every payment.",
+      "problems": { "0": "Trusted Workers", "1": "Material Control", "2": "Secure Payments" },
+      "tagline": "Built by Africans.\nFor Africans.\nFrom anywhere in the world.",
+      "markets": "Active in 🇨🇩 DRC  ·  🇦🇴 Angola",
+      "stakeholders": {
+        "homeowners": { "tag": "HOMEOWNERS", "title": "You're in control", "desc": "Post projects, receive competitive bids, approve every material purchase in real time through a shared cart, and release payments only when work is verified." },
+        "workers":    { "tag": "WORKERS",    "title": "Grow with confidence", "desc": "Access quality clients, receive safe milestone payments, and get tools to build your reputation and grow your trade." },
+        "suppliers":  { "tag": "SUPPLIERS",  "title": "Sell without chasing", "desc": "Receive pre-paid material orders directly. No unpaid invoices, no cash-flow stress — every order is funded before it reaches you." },
+        "ai":         { "tag": "AI LAYER",   "title": "Intelligence built in", "desc": "Our AI analyses room photos to estimate dimensions, suggest the right materials and generate design previews — before a single brick is laid." }
+      }
+    },
     "stepLabel": "STEP",
     "steps": {
       "1": {"title":"Plan & Design","description":"Upload architectural drawings or use our AI to generate a blueprint from your vision. Collaborate with designers in real-time to perfect every detail before the first brick is laid.","cta":"Start planning →","imgAlt":"Architectural blueprint spread on a desk"},
@@ -77,6 +91,69 @@
       "3": {"title":"Fund Escrow","description":"Your money is safe. We only release funds when milestones are inspected and approved. Our secure escrow system protects your investment in concrete at every stage of construction.","cta":"How we escrow →","imgAlt":"Phone screen showing payment confirmed in escrow"},
       "4": {"title":"Remote Inspection","description":"Get weekly HD video updates while AI-driven quality reports are delivered to your dashboard. Monitor progress from anywhere in the world and approve milestones with confidence.","cta":"View sample result →","imgAlt":"Hand holding phone to inspect a house remotely"},
       "5": {"title":"Premium Supplies","description":"Access a curated catalogue of high-quality building materials. From sustainable timber to luxury finishes, we eliminate the markup and ensure only the best materials reach your site at wholesale prices.","cta":"Browse materials →","imgAlt":"Modern building materials showroom with timber shelves and material samples"}
+    }
+  },
+
+  "waitingList": {
+    "hero": {
+      "pill": "Early Access",
+      "title": "Be First to Build<br/>with Jenga-X.",
+      "subtitle": "Join our exclusive waiting list and get priority access when we launch in your market. Limited spots available.",
+      "stats": {
+        "membersLabel": "Early Members",
+        "countriesLabel": "Countries",
+        "launchingLabel": "Launching Soon"
+      }
+    },
+    "form": {
+      "title": "Reserve your spot.",
+      "subtitle": "Tell us who you are so we can personalise your Jenga-X experience from day one.",
+      "categoryTitle": "I am a...",
+      "categories": {
+        "soloBuilder":        { "label": "Solo Builder",          "desc": "Independent tradesperson or contractor" },
+        "constructionCompany":{ "label": "Construction Company",  "desc": "Registered construction business" },
+        "homeOwner":          { "label": "Home Owner",            "desc": "Building or renovating my property" },
+        "supplierShop":       { "label": "Supplier Shop",         "desc": "Construction materials supplier" }
+      },
+      "fields": {
+        "fullName":       "Full Name",
+        "companyName":    "Company Name",
+        "shopName":       "Shop / Business Name",
+        "contactPerson":  "Contact Person",
+        "mobile":         "Mobile Number",
+        "email":          "Email Address",
+        "emailOptional":  "Email Address (optional)",
+        "address":        "Full Address",
+        "country":        "Country",
+        "city":           "City"
+      },
+      "placeholders": {
+        "fullName":      "e.g. Jean-Pierre Mwamba",
+        "companyName":   "e.g. Mwamba Constructions Ltd",
+        "shopName":      "e.g. Kinshasa Building Supplies",
+        "contactPerson": "e.g. Jean-Pierre Mwamba",
+        "mobile":        "e.g. +243 81 234 5678",
+        "email":         "you@example.com",
+        "address":       "e.g. 12 Avenue Lumumba, Gombe",
+        "country":       "e.g. DRC, Angola, Belgium…",
+        "city":          "e.g. Kinshasa"
+      },
+      "submit":        "Join the Waiting List",
+      "submitting":    "Submitting…",
+      "errorRequired": "This field is required",
+      "errorEmail":    "Enter a valid email address",
+      "errorGeneral":  "Something went wrong. Please try again.",
+      "success": {
+        "title":    "You're on the list!",
+        "subtitle": "We'll notify you as soon as Jenga-X launches in your area. Keep an eye on your inbox.",
+        "back":     "Back to the site"
+      }
+    },
+    "benefits": {
+      "title": "Why join early?",
+      "0": { "title": "Priority Access",        "desc": "Be among the first to use Jenga-X when we launch in your market." },
+      "1": { "title": "Founding Member Rates",  "desc": "Lock in special pricing only available to early members." },
+      "2": { "title": "Shape the Product",       "desc": "Your feedback directly influences what we build next." }
     }
   },
 

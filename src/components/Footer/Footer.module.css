@@ -25,8 +25,17 @@
   font-weight: 800;
   letter-spacing: -0.5px;
   color: #fff;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 8px;
+}
+
+.logoImg {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .logo span {

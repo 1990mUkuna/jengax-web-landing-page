@@ -1,5 +1,5 @@
 {
-  "nav": {"howItWorks":"Comment ça marche","features":"Fonctionnalités","markets":"Marchés","downloadApp":"Télécharger"},
+  "nav": {"howItWorks":"Comment ça marche","features":"Fonctionnalités","markets":"Marchés","waitingList":"Liste d'attente","downloadApp":"Télécharger"},
   "hero": {"headline_line1":"Votre maison. Bien construite.","headline_line2":"Depuis n'importe où","headline_line3":"dans le monde.","subtext":"La place de marché de la construction pour la diaspora africaine. Gérez jalons, paiements et avancement du chantier en temps réel.","appStore":"App Store","googlePlay":"Google Play","freeNote":"Téléchargement gratuit · iOS & Android"},
   "footer": {"company":"Entreprise","support":"Support","connect":"Connecter","careers":"Carrières","press":"Presse","partners":"Partenaires","contact":"Contactez-nous","help":"Centre d'aide","privacy":"Politique de confidentialité","tagline":"Construisez-le. Depuis n'importe où.","copy":"© 2024 Jenga-X. Tous droits réservés.","terms":"Conditions d'utilisation"},
   "cta": {"title":"Prêt à démarrer les travaux ?","subtitle":"Rejoignez plus de 5 000 membres de la diaspora qui construisent leur héritage avec Jenga‑X. Lancez votre premier jalon aujourd'hui.","appStoreSmall":"App Store","getItOn":"Get it On","downloadNow":"Télécharger","googlePlay":"Google Play"},
@@ -53,7 +53,70 @@
     "footer": {"tagline":"Le foyer moderne de la diaspora mondiale qui construit au pays.","marketsTitle":"Marchés","marketsList":["RDC Congo","Angola","Nigéria","Kenya"],"companyTitle":"Entreprise","companyList":["À propos","Carrières","Contactez-nous","Politique de confidentialité"],"supportTitle":"Support","supportList":["Centre d'aide","Conditions d'utilisation","Centre de sécurité","Portail constructeur"],"copy":"© 2024 Jenga‑X. Construisez-le. De n'importe où.","locale":"🌐 Français | 💶 EUR"}
   },
 
-  "howItWorks": {"header": {"title":"Construire devrait ressembler à du progrès, pas du stress.","subtitle":"Cinq étapes simples vers votre projet de rêve. Gérez chaque étape depuis n'importe où dans le monde."},"stepLabel":"ÉTAPE","steps": {"1": {"title":"Planifier & Concevoir","description":"Téléchargez des plans ou utilisez notre IA pour générer un plan à partir de votre vision. Collaborez avec des designers en temps réel pour peaufiner chaque détail.","cta":"Commencer la planification →","imgAlt":"Plan architectural étalé sur un bureau"},"2": {"title":"Engager des professionnels","description":"Parcourez des entrepreneurs vérifiés avec des notes d'autres constructeurs de la diaspora. Éliminez les intermédiaires et faites confiance à des vérifications rigoureuses.","cta":"Parcourir les entrepreneurs →","imgAlt":"Ingénieur vérifié sur un chantier"},"3": {"title":"Financement en séquestre","description":"Votre argent est en sécurité. Nous ne libérons les fonds que lorsque les jalons sont inspectés et approuvés.","cta":"Comment fonctionne le séquestre →","imgAlt":"Écran de téléphone montrant paiement confirmé"},"4": {"title":"Inspection à distance","description":"Recevez des mises à jour vidéo hebdomadaires en HD pendant que des rapports de qualité générés par l'IA sont livrés à votre tableau de bord.","cta":"Voir un exemple →","imgAlt":"Main tenant un téléphone pour inspecter une maison"},"5": {"title":"Fournitures premium","description":"Accédez à un catalogue soigné de matériaux de construction de haute qualité. Du bois durable aux finitions de luxe, nous éliminons la marge excessive.","cta":"Parcourir les matériaux →","imgAlt":"Showroom de matériaux modernes"}}},
+  "howItWorks": {"header": {"title":"Construire devrait ressembler à du progrès, pas du stress.","subtitle":"Cinq étapes simples vers votre projet de rêve. Gérez chaque étape depuis n'importe où dans le monde."},"about":{"tag":"LA PLATEFORME","title":"Un marché bâti sur la confiance,\npar-delà les frontières.","body":"Jenga-X est un marché mobile qui connecte les propriétaires — localement ou depuis l'étranger — avec des travailleurs de construction vérifiés, des fournisseurs de matériaux et des formations professionnelles. Conçu pour la diaspora africaine et les propriétaires locaux qui construisent ou rénovent en RDC et en Angola, nous résolvons les trois problèmes fondamentaux de la construction : trouver des travailleurs de confiance, contrôler les achats de matériaux et sécuriser chaque paiement.","problems":{"0":"Travailleurs de confiance","1":"Contrôle des matériaux","2":"Paiements sécurisés"},"tagline":"Construit par des Africains.\nPour les Africains.\nDepuis n'importe où dans le monde.","markets":"Actif en 🇨🇩 RDC  ·  🇦🇴 Angola","stakeholders":{"homeowners":{"tag":"PROPRIÉTAIRES","title":"Vous êtes aux commandes","desc":"Publiez vos projets, recevez des offres compétitives, approuvez chaque achat de matériaux en temps réel via un panier partagé et libérez les paiements uniquement quand le travail est vérifié."},"workers":{"tag":"ARTISANS","title":"Développez-vous en confiance","desc":"Accédez à des clients de qualité, recevez des paiements par jalons sécurisés et obtenez les outils pour développer votre réputation et votre activité."},"suppliers":{"tag":"FOURNISSEURS","title":"Vendez sans courir","desc":"Recevez des commandes prépayées directement. Plus de factures impayées ni de problèmes de trésorerie — chaque commande est financée avant de vous parvenir."},"ai":{"tag":"IA INTÉGRÉE","title":"L'intelligence au service du chantier","desc":"Notre IA analyse les photos de pièces pour estimer les dimensions, suggérer les matériaux adaptés et générer des aperçus de design — avant que la première brique soit posée."}}},"stepLabel":"ÉTAPE","steps": {"1": {"title":"Planifier & Concevoir","description":"Téléchargez des plans ou utilisez notre IA pour générer un plan à partir de votre vision. Collaborez avec des designers en temps réel pour peaufiner chaque détail.","cta":"Commencer la planification →","imgAlt":"Plan architectural étalé sur un bureau"},"2": {"title":"Engager des professionnels","description":"Parcourez des entrepreneurs vérifiés avec des notes d'autres constructeurs de la diaspora. Éliminez les intermédiaires et faites confiance à des vérifications rigoureuses.","cta":"Parcourir les entrepreneurs →","imgAlt":"Ingénieur vérifié sur un chantier"},"3": {"title":"Financement en séquestre","description":"Votre argent est en sécurité. Nous ne libérons les fonds que lorsque les jalons sont inspectés et approuvés.","cta":"Comment fonctionne le séquestre →","imgAlt":"Écran de téléphone montrant paiement confirmé"},"4": {"title":"Inspection à distance","description":"Recevez des mises à jour vidéo hebdomadaires en HD pendant que des rapports de qualité générés par l'IA sont livrés à votre tableau de bord.","cta":"Voir un exemple →","imgAlt":"Main tenant un téléphone pour inspecter une maison"},"5": {"title":"Fournitures premium","description":"Accédez à un catalogue soigné de matériaux de construction de haute qualité. Du bois durable aux finitions de luxe, nous éliminons la marge excessive.","cta":"Parcourir les matériaux →","imgAlt":"Showroom de matériaux modernes"}}},
+
+  "waitingList": {
+    "hero": {
+      "pill": "Accès anticipé",
+      "title": "Soyez le premier à construire<br/>avec Jenga-X.",
+      "subtitle": "Rejoignez notre liste d'attente exclusive et obtenez un accès prioritaire lors du lancement dans votre marché. Places limitées.",
+      "stats": {
+        "membersLabel": "Membres anticipés",
+        "countriesLabel": "Pays",
+        "launchingLabel": "Lancement imminent"
+      }
+    },
+    "form": {
+      "title": "Réservez votre place.",
+      "subtitle": "Dites-nous qui vous êtes pour personnaliser votre expérience Jenga-X dès le premier jour.",
+      "categoryTitle": "Je suis…",
+      "categories": {
+        "soloBuilder":        { "label": "Constructeur solo",           "desc": "Artisan ou entrepreneur indépendant" },
+        "constructionCompany":{ "label": "Entreprise de construction",  "desc": "Société de construction enregistrée" },
+        "homeOwner":          { "label": "Propriétaire",                "desc": "Construction ou rénovation de ma propriété" },
+        "supplierShop":       { "label": "Fournisseur",                 "desc": "Fournisseur de matériaux de construction" }
+      },
+      "fields": {
+        "fullName":       "Nom complet",
+        "companyName":    "Nom de l'entreprise",
+        "shopName":       "Nom de la boutique",
+        "contactPerson":  "Personne de contact",
+        "mobile":         "Numéro de mobile",
+        "email":          "Adresse e-mail",
+        "emailOptional":  "Adresse e-mail (optionnelle)",
+        "address":        "Adresse complète",
+        "country":        "Pays",
+        "city":           "Ville"
+      },
+      "placeholders": {
+        "fullName":      "ex. Jean-Pierre Mwamba",
+        "companyName":   "ex. Mwamba Constructions SA",
+        "shopName":      "ex. Matériaux Kinshasa",
+        "contactPerson": "ex. Jean-Pierre Mwamba",
+        "mobile":        "ex. +243 81 234 5678",
+        "email":         "vous@exemple.com",
+        "address":       "ex. 12 Avenue Lumumba, Gombe",
+        "country":       "ex. RDC, Angola, Belgique…",
+        "city":          "ex. Kinshasa"
+      },
+      "submit":        "Rejoindre la liste d'attente",
+      "submitting":    "Envoi en cours…",
+      "errorRequired": "Ce champ est obligatoire",
+      "errorEmail":    "Entrez une adresse e-mail valide",
+      "errorGeneral":  "Une erreur s'est produite. Veuillez réessayer.",
+      "success": {
+        "title":    "Vous êtes sur la liste !",
+        "subtitle": "Nous vous informerons dès le lancement de Jenga-X dans votre région. Surveillez votre boîte de réception.",
+        "back":     "Retour au site"
+      }
+    },
+    "benefits": {
+      "title": "Pourquoi rejoindre tôt ?",
+      "0": { "title": "Accès prioritaire",         "desc": "Soyez parmi les premiers à utiliser Jenga-X lors du lancement dans votre marché." },
+      "1": { "title": "Tarifs membres fondateurs",  "desc": "Bénéficiez de tarifs spéciaux réservés aux membres anticipés." },
+      "2": { "title": "Façonnez le produit",         "desc": "Vos retours influencent directement ce que nous construisons ensuite." }
+    }
+  },
 
   "featuresPage": {"hero": {"pill":"Conçu pour la diaspora","title":"Outils pour une <em>Nouvelle Héritage.</em>","subtitle":"Allier normes professionnelles mondiales et savoir-faire local. Construisez avec précision, confiance et chaleur culturelle de n'importe où.","getStarted":"Commencer","watchStory":"Voir l'histoire"},"transformation": {"title":"La suite de transformation","subtitle":"Voyez comment nos outils de précision transforment les visions ambitieuses en réalités époustouflantes."},"toggle": {"before":"Avant","after":"Après"},"beforeLabel":"AVANT","afterLabel":"APRÈS","projects": {"culinaryCraft": {"title":"Culinary Craft","feature":"Panier de matériaux","description":"Grâce à notre Panier de Matériaux, cette cuisine a été équipée de composants premium livrés directement sur le chantier, économisant 15% sur la logistique."},"sanctuaryBuilt": {"title":"Sanctuary Built","feature":"Analyseur de chantier IA","description":"L'analyse IA a identifié tôt des risques de plomberie structurelle, assurant une finition parfaite."},"heritageHaven": {"title":"Heritage Haven","feature":"Aperçu design IA","description":"Prototypé via l'IA, ce jardin allie végétation tropicale et espaces modernes."}},"precision": {"title":"Ingénierie de précision pour chaque jalon","subtitle":"Cinq modules principaux conçus pour éliminer l'incertitude et sécuriser votre parcours de construction."},"bento": {"analysisTag":"ANALYSE","aiSite": {"title":"Analyseur de chantier IA","desc":"Détection des défauts en temps réel via flux vidéo haute fidélité.","cta":"En savoir plus →"},"cart": {"title":"Panier collaboratif","desc":"Accès aux prix de gros et chaînes d'approvisionnement transparentes.","cta":"Explorer le marketplace →"},"securityTag":"SÉCURITÉ","escrow": {"title":"Séquestre par jalon","desc":"Les fonds sont détenus en séquestre et ne sont libérés qu'après inspection."},"visualTag":"VISUALISATION","design": {"title":"Aperçu design IA","desc":"Projetez des changements intérieurs sur votre site réel."},"communityTag":"COMMUNAUTÉ","collective": {"title":"Collectif Jenga","desc":"Investissements groupés pour la diaspora.","cta":"Rejoindre"}},"cta": {"title":"Commencez votre transformation.","subtitle":"Téléchargez l'application Jenga‑X aujourd'hui et faites le premier pas vers la construction de votre héritage.","appStoreSmall":"Télécharger sur","appStore":"App Store","getItOn":"Get it on","googlePlay":"Google Play"}}
 }

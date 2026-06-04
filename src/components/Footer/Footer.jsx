@@ -1,5 +1,6 @@
 import styles from './Footer.module.css'
 import { useI18n } from '../../i18n/I18nProvider'
+import logoImg from '../../assets/jengaXLogo.png'
 
 export default function Footer() {
   const { t } = useI18n()
@@ -27,6 +28,7 @@ export default function Footer() {
         <div className={styles.top}>
           <div className={styles.brand}>
             <span className={styles.logo}>
+              <img src={logoImg} alt="" className={styles.logoImg} />
               Jenga<span>-X</span>
             </span>
             <p className={styles.tagline}>{t('footer.tagline')}</p>

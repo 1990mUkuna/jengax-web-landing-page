@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from './MarketsPage.module.css'
 import { useI18n } from '../../i18n/I18nProvider'
+import logoImg from '../../assets/jengaXLogo.png'
 
 // ─── Icons ───────────────────────────────────────────────────────────────────
 
@@ -247,7 +248,10 @@ export default function MarketsPage() {
         <div className={styles.container}>
           <div className={styles.mFooterTop}>
             <div className={styles.mFooterBrand}>
-              <span className={styles.mFooterLogo}>Jenga‑X</span>
+              <span className={styles.mFooterLogo}>
+                <img src={logoImg} alt="" className={styles.mFooterLogoImg} />
+                Jenga‑X
+              </span>
               <p className={styles.mFooterTagline}>{t('markets.footer.tagline')}</p>
               <div className={styles.mFooterSocials}>
                 <a href="#" aria-label="Share" className={styles.socialBtn}>{/* svg */}</a>
