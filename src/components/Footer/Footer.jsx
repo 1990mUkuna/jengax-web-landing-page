@@ -29,7 +29,7 @@ export default function Footer() {
           <div className={styles.brand}>
             <span className={styles.logo}>
               <img src={logoImg} alt="" className={styles.logoImg} />
-              Jenga<span>-X</span>
+              <span>Jenga<span className={styles.logoX}>X</span></span>
             </span>
             <p className={styles.tagline}>{t('footer.tagline')}</p>
           </div>

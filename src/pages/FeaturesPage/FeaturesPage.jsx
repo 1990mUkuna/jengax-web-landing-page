@@ -169,7 +169,7 @@ function PrecisionEngineering() {
             <p className={styles.bentoDesc}>{t('featuresPage.bento.design.desc')}</p>
           </div>
 
-          {/* Jenga Collective — red */}
+          {/* JengaX Collective — red */}
           <div className={`${styles.bentoCard} ${styles.collective} ${styles.bentoRed}`}>
             <div className={styles.bentoTag} style={{ background: 'rgba(255,255,255,0.15)', color: '#fff' }}>{t('featuresPage.bento.communityTag')}</div>
             <div className={styles.bentoIconDark}><IconUsers /></div>

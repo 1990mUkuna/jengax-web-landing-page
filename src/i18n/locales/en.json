@@ -1,8 +1,8 @@
 {
   "nav": {"howItWorks":"How it works","features":"Features","markets":"Markets","waitingList":"Waiting List","downloadApp":"Download App"},
   "hero": {"headline_line1":"Your home. Built right.","headline_line2":"From anywhere in","headline_line3":"the world.","subtext":"The construction marketplace for the African diaspora to build with trust. Manage milestones, payments, and site progress in real-time.","appStore":"App Store","googlePlay":"Google Play","freeNote":"Free to download · iOS & Android"},
-  "footer": {"company":"Company","support":"Support","connect":"Connect","careers":"Careers","press":"Press","partners":"Partners","contact":"Contact Us","help":"Help Center","privacy":"Privacy Policy","tagline":"Build it. From anywhere.","copy":"© 2024 Jenga-X. All rights reserved.","terms":"Terms of Service"},
-  "cta": {"title":"Ready to break ground?","subtitle":"Join 5,000+ diaspora members building their legacy with Jenga‑X. Start your first project milestone today.","appStoreSmall":"App Store","getItOn":"Get it On","downloadNow":"Download Now","googlePlay":"Google Play"},
+  "footer": {"company":"Company","support":"Support","connect":"Connect","careers":"Careers","press":"Press","partners":"Partners","contact":"Contact Us","help":"Help Center","privacy":"Privacy Policy","tagline":"Build it. From anywhere.","copy":"© 2024 JengaX. All rights reserved.","terms":"Terms of Service"},
+  "cta": {"title":"Ready to break ground?","subtitle":"Join 5,000+ diaspora members building their legacy with JengaX. Start your first project milestone today.","appStoreSmall":"App Store","getItOn":"Get it On","downloadNow":"Download Now","googlePlay":"Google Play"},
 
   "stats": {
     "diaspora": "Diaspora",
@@ -20,7 +20,7 @@
       "siteAnalyzer": {"title":"AI Site Analyser","description":"Our AI scans video feeds to detect structural flaws before they are covered by concrete."},
       "designPreview": {"title":"AI Design Preview","description":"Visualise interior changes instantly using generative AI mapped to your real site dimensions."}
     },
-    "collective": {"title":"Jenga Collective","description":"Join a community of thousands of diaspora builders sharing tips, supplier reviews, and local insights.","cta":"Join Collective"}
+    "collective": {"title":"JengaX Collective","description":"Join a community of thousands of diaspora builders sharing tips, supplier reviews, and local insights.","cta":"Join Collective"}
   },
 
   "markets": {
@@ -64,8 +64,8 @@
       "2": {"title":"Legal Compliance","desc":"Our local legal teams manage land titles and building permits so you don't have to navigate the bureaucracy alone."}
     },
     "masters": {"tag":"VERIFIED EXCELLENCE","title":"Building with Local Masters","visualText":"Verified builders on site","exampleName":"Jean-Pierre M.","exampleRole":"Verified Builder · Kinshasa","verified":"Verified"},
-    "cta": {"title":"Build your legacy in <span>Kinshasa.</span>","subtitle":"Take the first step towards your homeland project today. Join 5,000+ diaspora members who trust Jenga‑X.","actions": {"getStarted":"Get Started Now","schedule":"Schedule a Consultation"}},
-    "footer": {"tagline":"The modern hearth for the global diaspora building back home.","marketsTitle":"Markets","marketsList":["DRC Congo","Angola","Nigeria","Kenya"],"companyTitle":"Company","companyList":["About Us","Careers","Contact Us","Privacy Policy"],"supportTitle":"Support","supportList":["Help Center","Terms of Service","Safety Center","Builder Portal"],"copy":"© 2024 Jenga‑X. Build it. From anywhere.","locale":"🌐 English | 💵 USD"}
+    "cta": {"title":"Build your legacy in <span>Kinshasa.</span>","subtitle":"Take the first step towards your homeland project today. Join 5,000+ diaspora members who trust JengaX.","actions": {"getStarted":"Get Started Now","schedule":"Schedule a Consultation"}},
+    "footer": {"tagline":"The modern hearth for the global diaspora building back home.","marketsTitle":"Markets","marketsList":["DRC Congo","Angola","Nigeria","Kenya"],"companyTitle":"Company","companyList":["About Us","Careers","Contact Us","Privacy Policy"],"supportTitle":"Support","supportList":["Help Center","Terms of Service","Safety Center","Builder Portal"],"copy":"© 2024 JengaX. Build it. From anywhere.","locale":"🌐 English | 💵 USD"}
   },
 
   "howItWorks": {
@@ -73,7 +73,7 @@
     "about": {
       "tag": "THE PLATFORM",
       "title": "A marketplace built for trust,\nacross borders.",
-      "body": "Jenga-X is a mobile marketplace that connects homeowners — locally or from abroad — with verified construction workers, material suppliers and trade courses. Built for the African diaspora and local homeowners building or renovating property in DRC and Angola, we solve the three core problems of construction: finding trusted workers, controlling material purchases, and securing every payment.",
+      "body": "JengaX is a mobile marketplace that connects homeowners — locally or from abroad — with verified construction workers, material suppliers and trade courses. Built for the African diaspora and local homeowners building or renovating property in DRC and Angola, we solve the three core problems of construction: finding trusted workers, controlling material purchases, and securing every payment.",
       "problems": { "0": "Trusted Workers", "1": "Material Control", "2": "Secure Payments" },
       "tagline": "Built by Africans.\nFor Africans.\nFrom anywhere in the world.",
       "markets": "Active in 🇨🇩 DRC  ·  🇦🇴 Angola",
@@ -97,17 +97,20 @@
   "waitingList": {
     "hero": {
       "pill": "Early Access",
-      "title": "Be First to Build<br/>with Jenga-X.",
+      "title": "Be First to Build<br/>with JengaX.",
       "subtitle": "Join our exclusive waiting list and get priority access when we launch in your market. Limited spots available.",
       "stats": {
         "membersLabel": "Early Members",
-        "countriesLabel": "Countries",
+        "workersLabel": "Professional Workers",
+        "suppliersValue": "Verified",
+        "suppliersLabel": "Quality Suppliers",
+        "countriesLabel": "DRC & Angola",
         "launchingLabel": "Launching Soon"
       }
     },
     "form": {
       "title": "Reserve your spot.",
-      "subtitle": "Tell us who you are so we can personalise your Jenga-X experience from day one.",
+      "subtitle": "Tell us who you are so we can personalise your JengaX experience from day one.",
       "categoryTitle": "I am a...",
       "categories": {
         "soloBuilder":        { "label": "Solo Builder",          "desc": "Independent tradesperson or contractor" },
@@ -145,13 +148,13 @@
       "errorGeneral":  "Something went wrong. Please try again.",
       "success": {
         "title":    "You're on the list!",
-        "subtitle": "We'll notify you as soon as Jenga-X launches in your area. Keep an eye on your inbox.",
+        "subtitle": "We'll notify you as soon as JengaX launches in your area. Keep an eye on your inbox.",
         "back":     "Back to the site"
       }
     },
     "benefits": {
       "title": "Why join early?",
-      "0": { "title": "Priority Access",        "desc": "Be among the first to use Jenga-X when we launch in your market." },
+      "0": { "title": "Priority Access",        "desc": "Be among the first to use JengaX when we launch in your market." },
       "1": { "title": "Founding Member Rates",  "desc": "Lock in special pricing only available to early members." },
       "2": { "title": "Shape the Product",       "desc": "Your feedback directly influences what we build next." }
     }
@@ -159,7 +162,7 @@
 
   "featuresPage": {
     "hero": {"pill":"Built for the Diaspora","title":"Tools for a <em>New Legacy.</em>","subtitle":"Bridging global professional standards with local craftsmanship. Build with precision, trust, and cultural warmth from anywhere in the world.","getStarted":"Get Started","watchStory":"Watch Story"},
-    "transformation": {"title":"The Transformation Suite","subtitle":"Witness how our precision tools turn ambitious visions into breathtaking realities. From site analysis to material delivery, Jenga‑X is your digital bridge to construction excellence."},
+    "transformation": {"title":"The Transformation Suite","subtitle":"Witness how our precision tools turn ambitious visions into breathtaking realities. From site analysis to material delivery, JengaX is your digital bridge to construction excellence."},
     "toggle": {"before":"Before","after":"After"},
     "beforeLabel":"BEFORE","afterLabel":"AFTER",
     "projects": {
@@ -168,7 +171,7 @@
       "heritageHaven": {"title":"Heritage Haven","feature":"AI Design Preview","description":"Prototyped via AI Design Preview, this garden blends tropical lushness with modern entertainment spaces seamlessly."}
     },
     "precision": {"title":"Precision Engineering for Every Milestone","subtitle":"Five core modules designed to eliminate uncertainty and empower your build journey from afar."},
-    "bento": {"analysisTag":"ANALYSIS","aiSite":{"title":"AI Site Analyser","desc":"Real-time flaw detection via high-fidelity video feeds. Our neural engine spots structural inconsistencies before they become costly errors.","cta":"Learn More →"},"cart":{"title":"Collaborative Material Cart","desc":"Access wholesale pricing and transparent supply chains. Direct-to-site delivery with GPS tracking and automated inventory updates.","cta":"Explore Marketplace →"},"securityTag":"SECURITY","escrow":{"title":"Milestone Escrow","desc":"Funds are held in secure escrow and only released after site inspections verify milestone completion."},"visualTag":"VISUALIZATION","design":{"title":"AI Design Preview","desc":"Map high-end interior changes onto your real site using augmented reality before buying a single tile."},"communityTag":"COMMUNITY","collective":{"title":"Jenga Collective","desc":"Pooled investments for the diaspora. Join forces with others to develop premium projects and share in the equity."}},
-    "cta": {"title":"Start your transformation.","subtitle":"Download the Jenga‑X app today and take the first step toward building your legacy with confidence.","appStoreSmall":"Download on the","appStore":"App Store","getItOn":"Get it On","googlePlay":"Google Play"}
+    "bento": {"analysisTag":"ANALYSIS","aiSite":{"title":"AI Site Analyser","desc":"Real-time flaw detection via high-fidelity video feeds. Our neural engine spots structural inconsistencies before they become costly errors.","cta":"Learn More →"},"cart":{"title":"Collaborative Material Cart","desc":"Access wholesale pricing and transparent supply chains. Direct-to-site delivery with GPS tracking and automated inventory updates.","cta":"Explore Marketplace →"},"securityTag":"SECURITY","escrow":{"title":"Milestone Escrow","desc":"Funds are held in secure escrow and only released after site inspections verify milestone completion."},"visualTag":"VISUALIZATION","design":{"title":"AI Design Preview","desc":"Map high-end interior changes onto your real site using augmented reality before buying a single tile."},"communityTag":"COMMUNITY","collective":{"title":"JengaX Collective","desc":"Pooled investments for the diaspora. Join forces with others to develop premium projects and share in the equity."}},
+    "cta": {"title":"Start your transformation.","subtitle":"Download the JengaX app today and take the first step toward building your legacy with confidence.","appStoreSmall":"Download on the","appStore":"App Store","getItOn":"Get it On","googlePlay":"Google Play"}
   }
 }

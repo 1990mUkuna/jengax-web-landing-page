@@ -4,6 +4,26 @@ import styles from './WaitingListPage.module.css'
 import { useI18n } from '../../i18n/I18nProvider'
 import { submitWaitingList } from '../../services/waitingListService'
 
+const FlagDRC = () => (
+  <svg viewBox="0 0 4 3" width="32" height="24" role="img" aria-label="DR Congo">
+    <rect width="4" height="3" fill="#007fff" />
+    <path d="M0 2.55 L3.4 0 H4 V0.45 L0.6 3 H0 Z" fill="#f7d618" />
+    <path d="M0 2.775 L3.7 0 H4 V0.225 L0.3 3 H0 Z" fill="#ce1021" />
+    <polygon points="0.6,0.15 0.68,0.39 0.93,0.39 0.73,0.54 0.8,0.78 0.6,0.63 0.4,0.78 0.47,0.54 0.27,0.39 0.52,0.39" fill="#f7d618" />
+  </svg>
+)
+
+const FlagAngola = () => (
+  <svg viewBox="0 0 4 3" width="32" height="24" role="img" aria-label="Angola">
+    <rect width="4" height="1.5" fill="#cc092f" />
+    <rect y="1.5" width="4" height="1.5" fill="#000" />
+    <path d="M2.35 0.95 A0.6 0.6 0 1 1 1.6 2.05" fill="none" stroke="#ffcb00" strokeWidth="0.14" />
+    <path d="M1.55 1.1 L2.5 2.0" stroke="#ffcb00" strokeWidth="0.14" strokeLinecap="round" />
+    <polygon points="1.85,1.1 1.9,1.25 2.05,1.25 1.93,1.34 1.97,1.49 1.85,1.4 1.73,1.49 1.77,1.34 1.65,1.25 1.8,1.25" fill="#ffcb00" />
+  </svg>
+)
+
+
 // ─── Icons ────────────────────────────────────────────────────────────────────
 
 const IconHardHat = () => (
@@ -165,17 +185,24 @@ export default function WaitingListPage() {
           <p className={styles.heroSub}>{t('waitingList.hero.subtitle')}</p>
           <div className={styles.heroStats}>
             <div className={styles.heroStat}>
-              <strong>2,400+</strong>
-              <span>{t('waitingList.hero.stats.membersLabel')}</span>
+              <strong>1,000+</strong>
+              <span>{t('waitingList.hero.stats.workersLabel')}</span>
             </div>
             <div className={styles.heroStatDivider} />
             <div className={styles.heroStat}>
-              <strong>12</strong>
+              <strong>{t('waitingList.hero.stats.suppliersValue')}</strong>
+              <span>{t('waitingList.hero.stats.suppliersLabel')}</span>
+            </div>
+            <div className={styles.heroStatDivider} />
+            <div className={styles.heroStat}>
+              <strong className={styles.heroStatFlags}>
+                2 <FlagDRC /> <FlagAngola />
+              </strong>
               <span>{t('waitingList.hero.stats.countriesLabel')}</span>
             </div>
             <div className={styles.heroStatDivider} />
             <div className={styles.heroStat}>
-              <strong>2025</strong>
+              <strong>Q4 2026</strong>
               <span>{t('waitingList.hero.stats.launchingLabel')}</span>
             </div>
           </div>

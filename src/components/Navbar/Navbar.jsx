@@ -21,8 +21,8 @@ export default function Navbar() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <NavLink to="/" className={styles.logo}>
-          <img src={logoImg} alt="Jenga-X" className={styles.logoImg} />
-          Jenga<span>-X</span>
+          <img src={logoImg} alt="JengaX" className={styles.logoImg} />
+          <span>Jenga<span className={styles.logoX}>X</span></span>
         </NavLink>
 
         <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>

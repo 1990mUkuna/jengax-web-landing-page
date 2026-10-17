@@ -250,7 +250,7 @@ export default function MarketsPage() {
             <div className={styles.mFooterBrand}>
               <span className={styles.mFooterLogo}>
                 <img src={logoImg} alt="" className={styles.mFooterLogoImg} />
-                Jenga‑X
+                JengaX
               </span>
               <p className={styles.mFooterTagline}>{t('markets.footer.tagline')}</p>
               <div className={styles.mFooterSocials}>
