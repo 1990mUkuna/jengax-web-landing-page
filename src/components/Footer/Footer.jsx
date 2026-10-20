@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './Footer.module.css'
 import { useI18n } from '../../i18n/I18nProvider'
 import logoImg from '../../assets/jengaXLogo.png'
@@ -11,9 +12,9 @@ export default function Footer() {
       { label: t('footer.partners'), href: '#' },
     ],
     [t('footer.support')]: [
-      { label: t('footer.contact'), href: '#' },
+      { label: t('footer.contact'), href: 'mailto:jengax-admin@jengax.co' },
       { label: t('footer.help'), href: '#' },
-      { label: t('footer.privacy'), href: '#' },
+      { label: t('footer.privacy'), to: '/privacy' },
     ],
     [t('footer.connect')]: [
       { label: 'LinkedIn', href: '#' },
@@ -39,9 +40,11 @@ export default function Footer() {
               <div key={group} className={styles.column}>
                 <h4 className={styles.groupTitle}>{group}</h4>
                 <ul className={styles.linkList}>
-                  {items.map(({ label, href }) => (
+                  {items.map(({ label, href, to }) => (
                     <li key={label}>
-                      <a href={href} className={styles.link}>{label}</a>
+                      {to
+                        ? <Link to={to} className={styles.link}>{label}</Link>
+                        : <a href={href} className={styles.link}>{label}</a>}
                     </li>
                   ))}
                 </ul>
@@ -53,8 +56,8 @@ export default function Footer() {
         <div className={styles.bottom}>
           <p className={styles.copy}>{t('footer.copy')}</p>
           <div className={styles.legal}>
-            <a href="#" className={styles.legalLink}>{t('footer.terms')}</a>
-            <a href="#" className={styles.legalLink}>{t('footer.privacy')}</a>
+            <Link to="/terms" className={styles.legalLink}>{t('footer.terms')}</Link>
+            <Link to="/privacy" className={styles.legalLink}>{t('footer.privacy')}</Link>
           </div>
         </div>
       </div>
