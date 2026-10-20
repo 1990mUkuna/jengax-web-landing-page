@@ -204,7 +204,7 @@ const fr = {
         { heading: '9.6 Droit au retrait du consentement' },
         "Lorsque le traitement est basé sur votre consentement, vous pouvez le retirer à tout moment sans que cela n'affecte la légalité du traitement effectué avant ce retrait.",
         { heading: '9.7 Comment exercer vos droits' },
-        "Pour exercer l'un de ces droits, contactez-nous à : mukuna@jengax.co. Nous répondrons à votre demande dans un délai de 30 jours.",
+        "Pour exercer l'un de ces droits, contactez-nous à : jengax-admin@jengax.co. Nous répondrons à votre demande dans un délai de 30 jours.",
       ],
     },
     {
@@ -232,7 +232,7 @@ const fr = {
       title: '12. Mineurs',
       body: [
         "JengaX est destinée exclusivement aux personnes âgées de 18 ans et plus. Nous ne collectons pas sciemment de données personnelles concernant des mineurs. Si nous découvrons qu'un mineur nous a fourni des données personnelles, nous les supprimerons immédiatement.",
-        'Si vous êtes parent ou tuteur et pensez que votre enfant nous a fourni des données, contactez-nous à mukuna@jengax.co.',
+        'Si vous êtes parent ou tuteur et pensez que votre enfant nous a fourni des données, contactez-nous à jengax-admin@jengax.co.',
       ],
     },
     {
