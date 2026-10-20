@@ -105,6 +105,14 @@
   font-style: normal;
 }
 
+.section p + .contact {
+  margin-top: 14px;
+}
+
+.contactOutro {
+  margin-top: 14px;
+}
+
 .contact span:first-child {
   font-weight: 700;
   color: var(--color-text);

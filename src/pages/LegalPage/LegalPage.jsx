@@ -9,14 +9,11 @@ const FALLBACK_NOTE = {
   en: 'This document is currently available in French only.',
   pt: 'Este documento está atualmente disponível apenas em francês.',
 }
-const ENGLISH_NOTE = {
-  pt: 'Este documento está atualmente disponível em inglês e francês.',
-}
 
-// Turn the contact email and jengax.co/privacy into links.
+// Turn @jengax.co emails and jengax.co/privacy into links.
 function linkify(text) {
-  return text.split(/(jengax-admin@jengax\.co|jengax\.co\/privacy)/).map((part, i) => {
-    if (part === 'jengax-admin@jengax.co') return <a key={i} href={`mailto:${part}`}>{part}</a>
+  return text.split(/([\w.-]+@jengax\.co|jengax\.co\/privacy)/).map((part, i) => {
+    if (part.endsWith('@jengax.co')) return <a key={i} href={`mailto:${part}`}>{part}</a>
     if (part === 'jengax.co/privacy') return <Link key={i} to="/privacy">{part}</Link>
     return part
   })
@@ -26,7 +23,7 @@ export default function LegalPage({ doc }) {
   const { locale } = useI18n()
   const lang = doc[locale] ? locale : doc.en ? 'en' : 'fr'
   const content = doc[lang]
-  const note = lang === locale ? null : lang === 'fr' ? FALLBACK_NOTE[locale] : ENGLISH_NOTE[locale]
+  const note = lang === locale ? null : FALLBACK_NOTE[locale]
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -67,9 +64,11 @@ export default function LegalPage({ doc }) {
 
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>{content.contact.title}</h2>
+            {content.contact.intro && <p>{content.contact.intro}</p>}
             <address className={styles.contact}>
               {content.contact.lines.map((line) => <span key={line}>{linkify(line)}</span>)}
             </address>
+            {content.contact.outro && <p className={styles.contactOutro}>{content.contact.outro}</p>}
           </section>
         </div>
       </article>
