@@ -74,7 +74,7 @@
       "subtitle": "Dites-nous qui vous êtes pour personnaliser votre expérience JengaX dès le premier jour.",
       "categoryTitle": "Je suis…",
       "categories": {
-        "soloBuilder":        { "label": "Constructeur solo",           "desc": "Artisan ou entrepreneur indépendant" },
+        "soloBuilder":        { "label": "Constructeur",           "desc": "Artisan ou entrepreneur indépendant" },
         "constructionCompany":{ "label": "Entreprise de construction",  "desc": "Société de construction enregistrée" },
         "homeOwner":          { "label": "Propriétaire",                "desc": "Construction ou rénovation de ma propriété" },
         "supplierShop":       { "label": "Fournisseur",                 "desc": "Fournisseur de matériaux de construction" }
