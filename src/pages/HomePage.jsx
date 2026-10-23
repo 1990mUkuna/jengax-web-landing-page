@@ -1,5 +1,4 @@
 import Hero from '../components/Hero/Hero'
-import Stats from '../components/Stats/Stats'
 import HowItWorks from '../components/HowItWorks/HowItWorks'
 import Features from '../components/Features/Features'
 import Markets from '../components/Markets/Markets'
@@ -10,7 +9,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Stats />
       <HowItWorks />
       <Features />
       <Markets />
