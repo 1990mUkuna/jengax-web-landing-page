@@ -82,6 +82,7 @@
         "emailOptional":  "Endereço de e-mail (opcional)",
         "address":        "Endereço completo",
         "country":        "País",
+        "countryName":    "Nome do país",
         "city":           "Cidade"
       },
       "placeholders": {
@@ -93,6 +94,7 @@
         "email":         "voce@exemplo.com",
         "address":       "ex. 12 Avenida Lumumba, Gombe",
         "country":       "ex. RDC, Angola, Bélgica…",
+        "countryName":   "ex. Bélgica, França, África do Sul…",
         "city":          "ex. Kinshasa"
       },
       "submit":        "Entrar na lista de espera",
@@ -105,6 +107,8 @@
       "whatsappConsent": "Aceito ser contactado(a) pela JengaX no WhatsApp sobre o lançamento da aplicação.",
       "alreadyRegistered": "Este número já está na lista de espera. Obrigado, a sua inscrição está feita! Vamos contactá-lo(a) pelo WhatsApp no lançamento.",
       "phoneOther":    "🌍 Outro país",
+      "countryOptions": { "drc": "RD Congo", "angola": "Angola", "other": "Outro país" },
+      "notificationLanguage": "Idioma das notificações:",
       "success": {
         "title":           "Bem-vindo(a) à lista de espera JengaX 🎉",
         "subtitle":        "Último passo: confirme a sua inscrição no WhatsApp para receber o link de download assim que a aplicação estiver pronta.",

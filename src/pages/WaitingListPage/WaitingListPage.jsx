@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './WaitingListPage.module.css'
 import { useI18n } from '../../i18n/I18nProvider'
@@ -109,16 +109,25 @@ const CATEGORIES = [
 
 const BENEFIT_ICONS = [IconRocket, IconGift, IconStar]
 
-function blankForm() {
+// Country choice decides the notification language (welcome + launch messages).
+const COUNTRY_CHOICES = {
+  DRC:    { language: 'fr', phoneCountry: 'CD', languageName: 'Français' },
+  Angola: { language: 'pt', phoneCountry: 'AO', languageName: 'Português' },
+  OTHER:  { language: 'en', phoneCountry: null, languageName: 'English' },
+}
+const LOCALE_TO_COUNTRY = { fr: 'DRC', pt: 'Angola', en: 'OTHER' }
+
+function blankForm(locale) {
+  const countryChoice = LOCALE_TO_COUNTRY[locale] || 'DRC'
   return {
     companyName: '', shopName: '', fullName: '', contactPerson: '',
-    phoneCountry: DEFAULT_PHONE_COUNTRY, phoneDial: '', mobile: '',
-    email: '', address: '', country: '', city: '', whatsappOptIn: false,
+    phoneCountry: COUNTRY_CHOICES[countryChoice].phoneCountry || DEFAULT_PHONE_COUNTRY, phoneDial: '', mobile: '',
+    email: '', address: '', countryChoice, country: '', city: '', whatsappOptIn: false,
   }
 }
 
 function requiredFor(category) {
-  const base = ['mobile', 'address', 'country', 'city']
+  const base = ['mobile', 'address', 'city']
   if (category === 'constructionCompany') return [...base, 'companyName', 'contactPerson', 'email']
   if (category === 'supplierShop')        return [...base, 'shopName', 'contactPerson']
   return [...base, 'fullName']
@@ -130,9 +139,22 @@ export default function WaitingListPage() {
   const { t, locale } = useI18n()
 
   const [category, setCategory] = useState('homeOwner')
-  const [form, setForm]         = useState(blankForm())
+  const [form, setForm]         = useState(() => blankForm(locale))
   const [errors, setErrors]     = useState({})
   const [status, setStatus]     = useState('idle') // idle | submitting | success | duplicate | error
+  const countryTouched          = useRef(false)
+
+  // Follow the country picked in the language popup until the user changes it here.
+  useEffect(() => {
+    if (countryTouched.current) return
+    const countryChoice = LOCALE_TO_COUNTRY[locale]
+    if (!countryChoice) return
+    setForm(f => ({
+      ...f,
+      countryChoice,
+      phoneCountry: !f.mobile.trim() ? (COUNTRY_CHOICES[countryChoice].phoneCountry || f.phoneCountry) : f.phoneCountry,
+    }))
+  }, [locale])
 
   const BENEFITS = BENEFIT_ICONS.map((Icon, i) => ({
     Icon,
@@ -154,6 +176,19 @@ export default function WaitingListPage() {
     if (status === 'duplicate' && (errKey === 'mobile')) setStatus('idle')
   }
 
+  const handleCountryChoice = (e) => {
+    countryTouched.current = true
+    const countryChoice = e.target.value
+    const phoneCountry  = COUNTRY_CHOICES[countryChoice]?.phoneCountry
+    setForm(f => ({
+      ...f,
+      countryChoice,
+      // Follow the country for the phone code until the user has typed a number.
+      phoneCountry: phoneCountry && !f.mobile.trim() ? phoneCountry : f.phoneCountry,
+    }))
+    if (errors.country) setErrors(prev => ({ ...prev, country: '' }))
+  }
+
   const validate = () => {
     const errs = {}
     requiredFor(category).forEach(field => {
@@ -164,6 +199,9 @@ export default function WaitingListPage() {
     }
     if (form.mobile.trim() && !toE164(form.phoneCountry, form.mobile, form.phoneDial)) {
       errs.mobile = t('waitingList.form.errorPhone')
+    }
+    if (!COUNTRY_CHOICES[form.countryChoice] || (form.countryChoice === 'OTHER' && !form.country.trim())) {
+      errs.country = t('waitingList.form.errorRequired')
     }
     if (!form.whatsappOptIn) errs.whatsappOptIn = t('waitingList.form.errorConsent')
     return errs
@@ -178,7 +216,8 @@ export default function WaitingListPage() {
       await submitWaitingList({
         category, ...form,
         phoneE164: toE164(form.phoneCountry, form.mobile, form.phoneDial),
-        language: locale,
+        country:   form.countryChoice === 'OTHER' ? form.country.trim() : form.countryChoice,
+        language:  COUNTRY_CHOICES[form.countryChoice].language,
       })
       setStatus('success')
     } catch (err) {
@@ -361,9 +400,23 @@ export default function WaitingListPage() {
                       </Field>
 
                       <Field label={t('waitingList.form.fields.country')} required error={errors.country} half>
-                        <input className={`${styles.input} ${errors.country ? styles.inputErr : ''}`}
-                          name="country" value={form.country} onChange={handleChange}
-                          placeholder={t('waitingList.form.placeholders.country')} />
+                        <select
+                          className={`${styles.input} ${errors.country && form.countryChoice !== 'OTHER' ? styles.inputErr : ''}`}
+                          name="countryChoice" value={form.countryChoice} onChange={handleCountryChoice}
+                        >
+                          <option value="DRC">🇨🇩 {t('waitingList.form.countryOptions.drc')}</option>
+                          <option value="Angola">🇦🇴 {t('waitingList.form.countryOptions.angola')}</option>
+                          <option value="OTHER">🌍 {t('waitingList.form.countryOptions.other')}</option>
+                        </select>
+                        {form.countryChoice === 'OTHER' && (
+                          <input className={`${styles.input} ${errors.country ? styles.inputErr : ''}`}
+                            name="country" value={form.country} onChange={handleChange}
+                            placeholder={t('waitingList.form.placeholders.countryName')}
+                            aria-label={t('waitingList.form.fields.countryName')} />
+                        )}
+                        <span className={styles.fieldHint}>
+                          {t('waitingList.form.notificationLanguage')} <strong>{COUNTRY_CHOICES[form.countryChoice]?.languageName}</strong>
+                        </span>
                       </Field>
 
                       <Field label={t('waitingList.form.fields.city')} required error={errors.city} half>

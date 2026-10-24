@@ -316,6 +316,11 @@
   border-color: #e53e3e;
 }
 
+.fieldHint {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
 .fieldError {
   font-size: 0.72rem;
   color: #e53e3e;
