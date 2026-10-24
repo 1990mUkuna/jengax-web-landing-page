@@ -76,6 +76,8 @@
         "shopName":       "Nome da loja",
         "contactPerson":  "Pessoa de contato",
         "mobile":         "Número de celular",
+        "phoneCountry":   "Código do país",
+        "phoneDial":      "Código",
         "email":          "Endereço de e-mail",
         "emailOptional":  "Endereço de e-mail (opcional)",
         "address":        "Endereço completo",
@@ -87,7 +89,7 @@
         "companyName":   "ex. Mwamba Construções Ltda",
         "shopName":      "ex. Materiais Kinshasa",
         "contactPerson": "ex. Jean-Pierre Mwamba",
-        "mobile":        "ex. +243 81 234 5678",
+        "mobile":        "ex. 81 234 5678",
         "email":         "voce@exemplo.com",
         "address":       "ex. 12 Avenida Lumumba, Gombe",
         "country":       "ex. RDC, Angola, Bélgica…",
@@ -98,10 +100,17 @@
       "errorRequired": "Este campo é obrigatório",
       "errorEmail":    "Digite um endereço de e-mail válido",
       "errorGeneral":  "Algo deu errado. Por favor, tente novamente.",
+      "errorPhone":    "Introduza um número de celular válido para o país escolhido",
+      "errorConsent":  "Por favor, aceite ser contactado(a) pelo WhatsApp",
+      "whatsappConsent": "Aceito ser contactado(a) pela JengaX no WhatsApp sobre o lançamento da aplicação.",
+      "alreadyRegistered": "Este número já está na lista de espera. Obrigado, a sua inscrição está feita! Vamos contactá-lo(a) pelo WhatsApp no lançamento.",
+      "phoneOther":    "🌍 Outro país",
       "success": {
-        "title":    "Você está na lista!",
-        "subtitle": "Notificaremos você assim que a JengaX for lançada na sua área. Fique de olho na sua caixa de entrada.",
-        "back":     "Voltar ao site"
+        "title":           "Bem-vindo(a) à lista de espera JengaX 🎉",
+        "subtitle":        "Último passo: confirme a sua inscrição no WhatsApp para receber o link de download assim que a aplicação estiver pronta.",
+        "whatsappCta":     "Confirmar no WhatsApp",
+        "whatsappMessage": "Olá JengaX, acabei de entrar na lista de espera.",
+        "back":            "Voltar ao site"
       }
     },
     "benefits": {

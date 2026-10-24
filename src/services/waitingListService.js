@@ -1,18 +1,23 @@
 const SUPABASE_URL      = import.meta.env.VITE_SUPABASE_URL
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY
 
+export class DuplicateSignupError extends Error {}
+
 export async function submitWaitingList(data) {
   const payload = {
-    category:       data.category,
-    full_name:      data.fullName      || null,
-    company_name:   data.companyName   || null,
-    shop_name:      data.shopName      || null,
-    contact_person: data.contactPerson || null,
-    mobile:         data.mobile,
-    email:          data.email         || null,
-    address:        data.address,
-    country:        data.country,
-    city:           data.city,
+    category:           data.category,
+    full_name:          data.fullName      || null,
+    company_name:       data.companyName   || null,
+    shop_name:          data.shopName      || null,
+    contact_person:     data.contactPerson || null,
+    mobile:             data.phoneE164,
+    phone_e164:         data.phoneE164,
+    email:              data.email         || null,
+    address:            data.address,
+    country:            data.country,
+    city:               data.city,
+    whatsapp_opt_in:    data.whatsappOptIn === true,
+    preferred_language: data.language,
   }
 
   const response = await fetch(`${SUPABASE_URL}/rest/v1/waiting_list`, {
@@ -28,6 +33,15 @@ export async function submitWaitingList(data) {
 
   if (!response.ok) {
     const err = await response.json().catch(() => ({}))
+    // 23505 = unique violation on phone_e164: this number is already on the list.
+    if (response.status === 409 || err.code === '23505') throw new DuplicateSignupError()
     throw new Error(err.message || 'Submission failed')
   }
+}
+
+// wa.me click-to-chat link to the JengaX WhatsApp Business number.
+export function whatsappConfirmUrl(message) {
+  const number = String(import.meta.env.VITE_JENGAX_WHATSAPP_NUMBER || '').replace(/\D/g, '')
+  if (!number) return null
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`
 }

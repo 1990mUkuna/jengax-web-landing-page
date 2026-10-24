@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './WaitingListPage.module.css'
 import { useI18n } from '../../i18n/I18nProvider'
-import { submitWaitingList } from '../../services/waitingListService'
+import { submitWaitingList, whatsappConfirmUrl, DuplicateSignupError } from '../../services/waitingListService'
+import { PHONE_COUNTRIES, OTHER_COUNTRY, DEFAULT_PHONE_COUNTRY, toE164 } from '../../utils/phone'
 
 const FlagDRC = () => (
   <svg viewBox="0 0 4 3" width="32" height="24" role="img" aria-label="DR Congo">
@@ -91,6 +92,12 @@ const IconStar = () => (
   </svg>
 )
 
+const IconWhatsApp = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 0 1 2.76 6.68c0 5.2-4.24 9.43-9.45 9.43m8.04-17.47A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.37 1.37h.01c6.26 0 11.36-5.1 11.37-11.36 0-3.04-1.18-5.89-3.33-8.04"/>
+  </svg>
+)
+
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const CATEGORIES = [
@@ -103,7 +110,11 @@ const CATEGORIES = [
 const BENEFIT_ICONS = [IconRocket, IconGift, IconStar]
 
 function blankForm() {
-  return { companyName: '', shopName: '', fullName: '', contactPerson: '', mobile: '', email: '', address: '', country: '', city: '' }
+  return {
+    companyName: '', shopName: '', fullName: '', contactPerson: '',
+    phoneCountry: DEFAULT_PHONE_COUNTRY, phoneDial: '', mobile: '',
+    email: '', address: '', country: '', city: '', whatsappOptIn: false,
+  }
 }
 
 function requiredFor(category) {
@@ -116,12 +127,12 @@ function requiredFor(category) {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function WaitingListPage() {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
 
   const [category, setCategory] = useState('homeOwner')
   const [form, setForm]         = useState(blankForm())
   const [errors, setErrors]     = useState({})
-  const [status, setStatus]     = useState('idle') // idle | submitting | success | error
+  const [status, setStatus]     = useState('idle') // idle | submitting | success | duplicate | error
 
   const BENEFITS = BENEFIT_ICONS.map((Icon, i) => ({
     Icon,
@@ -132,13 +143,15 @@ export default function WaitingListPage() {
   const handleCategory = (cat) => {
     setCategory(cat)
     setErrors({})
-    if (status === 'error') setStatus('idle')
+    if (status === 'error' || status === 'duplicate') setStatus('idle')
   }
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setForm(f => ({ ...f, [name]: value }))
-    if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }))
+    const { name, value, type, checked } = e.target
+    setForm(f => ({ ...f, [name]: type === 'checkbox' ? checked : value }))
+    const errKey = name === 'phoneCountry' || name === 'phoneDial' ? 'mobile' : name
+    if (errors[errKey]) setErrors(prev => ({ ...prev, [errKey]: '' }))
+    if (status === 'duplicate' && (errKey === 'mobile')) setStatus('idle')
   }
 
   const validate = () => {
@@ -149,6 +162,10 @@ export default function WaitingListPage() {
     if (form.email?.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
       errs.email = t('waitingList.form.errorEmail')
     }
+    if (form.mobile.trim() && !toE164(form.phoneCountry, form.mobile, form.phoneDial)) {
+      errs.mobile = t('waitingList.form.errorPhone')
+    }
+    if (!form.whatsappOptIn) errs.whatsappOptIn = t('waitingList.form.errorConsent')
     return errs
   }
 
@@ -158,10 +175,14 @@ export default function WaitingListPage() {
     if (Object.keys(errs).length > 0) { setErrors(errs); return }
     setStatus('submitting')
     try {
-      await submitWaitingList({ category, ...form })
+      await submitWaitingList({
+        category, ...form,
+        phoneE164: toE164(form.phoneCountry, form.mobile, form.phoneDial),
+        language: locale,
+      })
       setStatus('success')
-    } catch {
-      setStatus('error')
+    } catch (err) {
+      setStatus(err instanceof DuplicateSignupError ? 'duplicate' : 'error')
     }
   }
 
@@ -172,6 +193,7 @@ export default function WaitingListPage() {
   const showContact  = category === 'constructionCompany' || category === 'supplierShop'
   const showFullName = category === 'soloBuilder' || category === 'homeOwner'
   const emailReq     = category === 'constructionCompany'
+  const whatsappUrl  = whatsappConfirmUrl(t('waitingList.form.success.whatsappMessage'))
 
   return (
     <div className={styles.page}>
@@ -221,7 +243,13 @@ export default function WaitingListPage() {
                   <div className={styles.successIconWrap}><IconCheck /></div>
                   <h2 className={styles.successTitle}>{t('waitingList.form.success.title')}</h2>
                   <p className={styles.successSub}>{t('waitingList.form.success.subtitle')}</p>
-                  <Link to="/" className={styles.successBtn}>{t('waitingList.form.success.back')}</Link>
+                  {whatsappUrl && (
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className={styles.whatsappBtn}>
+                      <IconWhatsApp />
+                      {t('waitingList.form.success.whatsappCta')}
+                    </a>
+                  )}
+                  <Link to="/" className={styles.successBackLink}>{t('waitingList.form.success.back')}</Link>
                 </div>
               ) : (
                 <>
@@ -289,17 +317,37 @@ export default function WaitingListPage() {
                         </Field>
                       )}
 
-                      <Field label={t('waitingList.form.fields.mobile')} required error={errors.mobile} half>
-                        <input className={`${styles.input} ${errors.mobile ? styles.inputErr : ''}`}
-                          name="mobile" type="tel" value={form.mobile} onChange={handleChange}
-                          placeholder={t('waitingList.form.placeholders.mobile')} />
+                      <Field label={t('waitingList.form.fields.mobile')} required error={errors.mobile}>
+                        <div className={styles.phoneRow}>
+                          <select
+                            className={`${styles.input} ${styles.phoneCountry}`}
+                            name="phoneCountry" value={form.phoneCountry} onChange={handleChange}
+                            aria-label={t('waitingList.form.fields.phoneCountry')}
+                          >
+                            {PHONE_COUNTRIES.map(c => (
+                              <option key={c.code} value={c.code}>{c.flag} +{c.dial} {c.name}</option>
+                            ))}
+                            <option value={OTHER_COUNTRY}>{t('waitingList.form.phoneOther')}</option>
+                          </select>
+                          {form.phoneCountry === OTHER_COUNTRY && (
+                            <input
+                              className={`${styles.input} ${styles.phoneDial} ${errors.mobile ? styles.inputErr : ''}`}
+                              name="phoneDial" type="tel" inputMode="numeric" value={form.phoneDial}
+                              onChange={handleChange} placeholder="+32"
+                              aria-label={t('waitingList.form.fields.phoneDial')}
+                            />
+                          )}
+                          <input className={`${styles.input} ${errors.mobile ? styles.inputErr : ''}`}
+                            name="mobile" type="tel" inputMode="tel" autoComplete="tel-national"
+                            value={form.mobile} onChange={handleChange}
+                            placeholder={t('waitingList.form.placeholders.mobile')} />
+                        </div>
                       </Field>
 
                       <Field
                         label={emailReq ? t('waitingList.form.fields.email') : t('waitingList.form.fields.emailOptional')}
                         required={emailReq}
                         error={errors.email}
-                        half
                       >
                         <input className={`${styles.input} ${errors.email ? styles.inputErr : ''}`}
                           name="email" type="email" value={form.email} onChange={handleChange}
@@ -326,6 +374,15 @@ export default function WaitingListPage() {
 
                     </div>
 
+                    <label className={`${styles.consent} ${errors.whatsappOptIn ? styles.consentErr : ''}`}>
+                      <input type="checkbox" name="whatsappOptIn" checked={form.whatsappOptIn} onChange={handleChange} />
+                      <span>{t('waitingList.form.whatsappConsent')}<span className={styles.req}> *</span></span>
+                    </label>
+                    {errors.whatsappOptIn && <p className={styles.consentError}>{errors.whatsappOptIn}</p>}
+
+                    {status === 'duplicate' && (
+                      <p className={styles.infoBanner}>{t('waitingList.form.alreadyRegistered')}</p>
+                    )}
                     {status === 'error' && (
                       <p className={styles.errorBanner}>{t('waitingList.form.errorGeneral')}</p>
                     )}

@@ -124,6 +124,8 @@
         "shopName":       "Shop / Business Name",
         "contactPerson":  "Contact Person",
         "mobile":         "Mobile Number",
+        "phoneCountry":   "Country code",
+        "phoneDial":      "Dial code",
         "email":          "Email Address",
         "emailOptional":  "Email Address (optional)",
         "address":        "Full Address",
@@ -135,7 +137,7 @@
         "companyName":   "e.g. Mwamba Constructions Ltd",
         "shopName":      "e.g. Kinshasa Building Supplies",
         "contactPerson": "e.g. Jean-Pierre Mwamba",
-        "mobile":        "e.g. +243 81 234 5678",
+        "mobile":        "e.g. 81 234 5678",
         "email":         "you@example.com",
         "address":       "e.g. 12 Avenue Lumumba, Gombe",
         "country":       "e.g. DRC, Angola, Belgium…",
@@ -146,10 +148,17 @@
       "errorRequired": "This field is required",
       "errorEmail":    "Enter a valid email address",
       "errorGeneral":  "Something went wrong. Please try again.",
+      "errorPhone":    "Enter a valid mobile number for the selected country",
+      "errorConsent":  "Please agree to be contacted on WhatsApp",
+      "whatsappConsent": "I agree to be contacted by JengaX on WhatsApp about the app launch.",
+      "alreadyRegistered": "This number is already on the waiting list. Thank you, you're registered! We'll contact you on WhatsApp at launch.",
+      "phoneOther":    "🌍 Other country",
       "success": {
-        "title":    "You're on the list!",
-        "subtitle": "We'll notify you as soon as JengaX launches in your area. Keep an eye on your inbox.",
-        "back":     "Back to the site"
+        "title":           "Welcome to the JengaX waiting list 🎉",
+        "subtitle":        "Last step: confirm your signup on WhatsApp to get the download link as soon as the app is ready.",
+        "whatsappCta":     "Confirm on WhatsApp",
+        "whatsappMessage": "Hello JengaX, I just joined the waiting list.",
+        "back":            "Back to the site"
       }
     },
     "benefits": {

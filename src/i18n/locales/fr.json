@@ -85,6 +85,8 @@
         "shopName":       "Nom de la boutique",
         "contactPerson":  "Personne de contact",
         "mobile":         "Numéro de mobile",
+        "phoneCountry":   "Indicatif pays",
+        "phoneDial":      "Indicatif",
         "email":          "Adresse e-mail",
         "emailOptional":  "Adresse e-mail (optionnelle)",
         "address":        "Adresse complète",
@@ -96,7 +98,7 @@
         "companyName":   "ex. Mwamba Constructions SA",
         "shopName":      "ex. Matériaux Kinshasa",
         "contactPerson": "ex. Jean-Pierre Mwamba",
-        "mobile":        "ex. +243 81 234 5678",
+        "mobile":        "ex. 81 234 5678",
         "email":         "vous@exemple.com",
         "address":       "ex. 12 Avenue Lumumba, Gombe",
         "country":       "ex. RDC, Angola, Belgique…",
@@ -107,10 +109,17 @@
       "errorRequired": "Ce champ est obligatoire",
       "errorEmail":    "Entrez une adresse e-mail valide",
       "errorGeneral":  "Une erreur s'est produite. Veuillez réessayer.",
+      "errorPhone":    "Entrez un numéro de mobile valide pour le pays choisi",
+      "errorConsent":  "Veuillez accepter d'être contacté(e) sur WhatsApp",
+      "whatsappConsent": "J'accepte d'être contacté(e) par JengaX sur WhatsApp au sujet du lancement de l'application.",
+      "alreadyRegistered": "Ce numéro est déjà sur la liste d'attente. Merci, vous êtes bien inscrit(e) ! Nous vous contacterons sur WhatsApp au lancement.",
+      "phoneOther":    "🌍 Autre pays",
       "success": {
-        "title":    "Vous êtes sur la liste !",
-        "subtitle": "Nous vous informerons dès le lancement de JengaX dans votre région. Surveillez votre boîte de réception.",
-        "back":     "Retour au site"
+        "title":           "Bienvenue sur la liste d'attente JengaX 🎉",
+        "subtitle":        "Dernière étape : confirmez votre inscription sur WhatsApp pour recevoir le lien de téléchargement dès que l'application sera prête.",
+        "whatsappCta":     "Confirmer sur WhatsApp",
+        "whatsappMessage": "Bonjour JengaX, je viens de rejoindre la liste d'attente.",
+        "back":            "Retour au site"
       }
     },
     "benefits": {
