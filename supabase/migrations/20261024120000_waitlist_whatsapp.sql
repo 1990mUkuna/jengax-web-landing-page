@@ -9,7 +9,9 @@ alter table public.waiting_list
   add column if not exists whatsapp_confirmed_at timestamptz,  -- set manually when they message us
   add column if not exists launch_notified_at    timestamptz,  -- set when included in a launch broadcast
   add column if not exists launch_batch          int,          -- broadcast list number (1, 2, 3…)
-  add column if not exists preferred_language    text default 'fr';
+  add column if not exists preferred_language    text default 'fr',
+  add column if not exists welcome_email_sent_at timestamptz,  -- set by the waitlist-welcome Edge Function
+  add column if not exists launch_email_sent_at  timestamptz;  -- set by the waitlist-launch Edge Function
 
 do $$
 begin
@@ -108,3 +110,50 @@ where whatsapp_opt_in
 order by created_at, id;
 
 revoke all on public.waitlist_whatsapp_export from anon, authenticated;
+
+
+-- 7. Welcome email: on INSERT, call the waitlist-welcome Edge Function --------
+-- Runs asynchronously through pg_net, so the signup never waits for or fails
+-- because of email sending. Needs two Vault secrets (see supabase/README.md):
+--   waitlist_functions_url  e.g. https://<project-ref>.supabase.co/functions/v1
+--   waitlist_webhook_secret the same value as the Edge Function WEBHOOK_SECRET
+create or replace function public.waiting_list_notify_welcome()
+returns trigger
+language plpgsql
+security definer
+set search_path = ''
+as $$
+declare
+  fn_url text;
+  secret text;
+begin
+  if new.email is null then
+    return new;
+  end if;
+
+  select decrypted_secret into fn_url from vault.decrypted_secrets where name = 'waitlist_functions_url';
+  select decrypted_secret into secret from vault.decrypted_secrets where name = 'waitlist_webhook_secret';
+  if fn_url is null or secret is null then
+    return new;
+  end if;
+
+  perform net.http_post(
+    url     := fn_url || '/waitlist-welcome',
+    headers := jsonb_build_object('Content-Type', 'application/json', 'x-webhook-secret', secret),
+    body    := jsonb_build_object('type', 'INSERT', 'record', jsonb_build_object(
+                 'id', new.id, 'email', new.email, 'preferred_language', new.preferred_language,
+                 'full_name', new.full_name, 'contact_person', new.contact_person))
+  );
+  return new;
+exception when others then
+  raise warning 'waiting_list_notify_welcome failed: %', sqlerrm;
+  return new;
+end;
+$$;
+
+revoke execute on function public.waiting_list_notify_welcome() from public, anon, authenticated;
+
+drop trigger if exists waiting_list_notify_welcome on public.waiting_list;
+create trigger waiting_list_notify_welcome
+  after insert on public.waiting_list
+  for each row execute function public.waiting_list_notify_welcome();
