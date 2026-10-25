@@ -112,6 +112,7 @@
       "success": {
         "title":           "Bem-vindo(a) à lista de espera JengaX 🎉",
         "subtitle":        "Último passo: entre no grupo de WhatsApp da JengaX. É lá que partilharemos as novidades e o link de download assim que a aplicação estiver pronta.",
+        "subtitleOther":   "Obrigado! A sua inscrição está confirmada. Avisaremos assim que a aplicação JengaX estiver pronta para download.",
         "whatsappCta":     "Entrar no grupo de WhatsApp",
         "redirecting":     "A abrir o grupo de WhatsApp em {n}… Depois toque em «Entrar».",
         "redirectFallback": "O WhatsApp não abriu? Toque no botão acima.",

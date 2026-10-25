@@ -150,14 +150,14 @@ export default function WaitingListPage() {
   // After a successful signup, open the WhatsApp group automatically.
   // WhatsApp still asks the user to tap "Join"; nobody can be added without it.
   useEffect(() => {
-    if (status !== 'success') return
+    if (status !== 'success' || category !== 'soloBuilder') return
     if (countdown <= 0) {
       window.location.href = WHATSAPP_GROUP_URL
       return
     }
     const timer = setTimeout(() => setCountdown(c => c - 1), 1000)
     return () => clearTimeout(timer)
-  }, [status, countdown])
+  }, [status, countdown, category])
 
   // Follow the country picked in the language popup until the user changes it here.
   useEffect(() => {
@@ -295,17 +295,27 @@ export default function WaitingListPage() {
                 <div className={styles.successState}>
                   <div className={styles.successIconWrap}><IconCheck /></div>
                   <h2 className={styles.successTitle}>{t('waitingList.form.success.title')}</h2>
-                  <p className={styles.successSub}>{t('waitingList.form.success.subtitle')}</p>
-                  <a href={WHATSAPP_GROUP_URL} className={styles.whatsappBtn}>
-                    <IconWhatsApp />
-                    {t('waitingList.form.success.whatsappCta')}
-                  </a>
-                  <p className={styles.redirectNote} aria-live="polite">
-                    {countdown > 0
-                      ? t('waitingList.form.success.redirecting').replace('{n}', countdown)
-                      : t('waitingList.form.success.redirectFallback')}
-                  </p>
-                  <Link to="/" className={styles.successBackLink}>{t('waitingList.form.success.back')}</Link>
+                  {category === 'soloBuilder' ? (
+                    <>
+                      {/* Builders only: join the JengaX WhatsApp group */}
+                      <p className={styles.successSub}>{t('waitingList.form.success.subtitle')}</p>
+                      <a href={WHATSAPP_GROUP_URL} className={styles.whatsappBtn}>
+                        <IconWhatsApp />
+                        {t('waitingList.form.success.whatsappCta')}
+                      </a>
+                      <p className={styles.redirectNote} aria-live="polite">
+                        {countdown > 0
+                          ? t('waitingList.form.success.redirecting').replace('{n}', countdown)
+                          : t('waitingList.form.success.redirectFallback')}
+                      </p>
+                      <Link to="/" className={styles.successBackLink}>{t('waitingList.form.success.back')}</Link>
+                    </>
+                  ) : (
+                    <>
+                      <p className={styles.successSub}>{t('waitingList.form.success.subtitleOther')}</p>
+                      <Link to="/" className={styles.successBtn}>{t('waitingList.form.success.back')}</Link>
+                    </>
+                  )}
                 </div>
               ) : (
                 <>

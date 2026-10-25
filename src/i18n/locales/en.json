@@ -160,6 +160,7 @@
       "success": {
         "title":           "Welcome to the JengaX waiting list 🎉",
         "subtitle":        "Last step: join the JengaX WhatsApp group. That's where we'll share news and the download link as soon as the app is ready.",
+        "subtitleOther":   "Thank you! Your signup is confirmed. We'll let you know as soon as the JengaX app is ready to download.",
         "whatsappCta":     "Join the WhatsApp group",
         "redirecting":     "Opening the WhatsApp group in {n}… Then tap “Join”.",
         "redirectFallback": "WhatsApp didn't open? Tap the button above.",

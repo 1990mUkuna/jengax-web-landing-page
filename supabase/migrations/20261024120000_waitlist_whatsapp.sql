@@ -142,6 +142,7 @@ begin
     headers := jsonb_build_object('Content-Type', 'application/json', 'x-webhook-secret', secret),
     body    := jsonb_build_object('type', 'INSERT', 'record', jsonb_build_object(
                  'id', new.id, 'email', new.email, 'preferred_language', new.preferred_language,
+                 'category', new.category,
                  'full_name', new.full_name, 'contact_person', new.contact_person))
   );
   return new;

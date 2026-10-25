@@ -95,8 +95,34 @@ const layout = (paragraphs: string[], buttons = '') => `<!doctype html>
 const btn = (href: string, label: string, color = '#E5383B') =>
   href ? `<a href="${escape(href)}" style="display:inline-block;margin:0 8px 12px 0;padding:12px 20px;background:${color};color:#fff;border-radius:100px;text-decoration:none;font-weight:700;font-size:14px">${escape(label)}</a>` : ''
 
-export function welcomeEmail(l: Lang) {
+// Non-builders: no trades tip and no WhatsApp group (the group is for builders only).
+const WELCOME_OTHER: Record<Lang, string[]> = {
+  fr: [
+    'Bienvenue chez JengaX 🏡',
+    "Merci d'avoir rejoint notre liste d'attente, votre inscription est confirmée.",
+    "Nous vous informerons dès que l'application JengaX sera prête à être téléchargée.",
+    "L'équipe JengaX — Construisez. De partout.",
+  ],
+  en: [
+    'Welcome to JengaX 🏡',
+    'Thank you for joining our waiting list, your signup is confirmed.',
+    'We will let you know as soon as the JengaX app is ready to download.',
+    'The JengaX team — Build it. From anywhere.',
+  ],
+  pt: [
+    'Bem-vindo(a) à JengaX 🏡',
+    'Obrigado por entrar na nossa lista de espera, a sua inscrição está confirmada.',
+    'Avisaremos assim que a aplicação JengaX estiver pronta para download.',
+    'A equipa JengaX — Construa. De qualquer lugar.',
+  ],
+}
+
+export function welcomeEmail(l: Lang, isBuilder: boolean) {
   const m = WELCOME[l]
+  if (!isBuilder) {
+    const lines = WELCOME_OTHER[l]
+    return { subject: m.subject.replace('👷🏾‍♂️', '🏡'), text: lines.join('\n\n'), html: layout(lines) }
+  }
   return {
     subject: m.subject,
     text: [...m.lines.slice(0, -1), `${m.group}: ${WHATSAPP_GROUP_URL}`, m.lines.at(-1)].join('\n\n'),

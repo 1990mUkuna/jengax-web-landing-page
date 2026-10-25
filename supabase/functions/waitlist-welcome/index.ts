@@ -15,7 +15,7 @@ Deno.serve(async (req) => {
   const { record } = await req.json().catch(() => ({ record: null }))
   if (!record?.id || !record?.email) return json({ skipped: 'no email' })
 
-  const { subject, text, html } = welcomeEmail(lang(record.preferred_language))
+  const { subject, text, html } = welcomeEmail(lang(record.preferred_language), record.category === 'soloBuilder')
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
