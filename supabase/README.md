@@ -20,7 +20,7 @@ Later, paid WhatsApp Cloud API can reuse the same columns (no schema change).
    an API key. Free tier: 100 emails/day, 3,000/month.
 
 2. **Database** — Supabase dashboard → SQL Editor → run
-   `migrations/20261024120000_waitlist_whatsapp.sql`.
+   `migrations/20261025090000_waitlist_whatsapp.sql`.
 
 3. **Vault secrets** — generate a random secret (`openssl rand -hex 32`), then in SQL Editor:
    ```sql
