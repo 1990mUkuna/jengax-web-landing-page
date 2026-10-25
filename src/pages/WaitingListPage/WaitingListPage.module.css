@@ -498,6 +498,12 @@
   transform: translateY(-1px);
 }
 
+.redirectNote {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
 .successBackLink {
   display: block;
   margin-top: 20px;

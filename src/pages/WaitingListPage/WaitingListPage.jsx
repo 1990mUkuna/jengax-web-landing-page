@@ -117,6 +117,7 @@ const COUNTRY_CHOICES = {
   OTHER:  { language: 'en', phoneCountry: null, languageName: 'English' },
 }
 const LOCALE_TO_COUNTRY = { fr: 'DRC', pt: 'Angola', en: 'OTHER' }
+const GROUP_REDIRECT_SECONDS = 3
 
 function blankForm(locale) {
   const countryChoice = LOCALE_TO_COUNTRY[locale] || 'DRC'
@@ -144,6 +145,19 @@ export default function WaitingListPage() {
   const [errors, setErrors]     = useState({})
   const [status, setStatus]     = useState('idle') // idle | submitting | success | duplicate | error
   const countryTouched          = useRef(false)
+  const [countdown, setCountdown] = useState(GROUP_REDIRECT_SECONDS)
+
+  // After a successful signup, open the WhatsApp group automatically.
+  // WhatsApp still asks the user to tap "Join"; nobody can be added without it.
+  useEffect(() => {
+    if (status !== 'success') return
+    if (countdown <= 0) {
+      window.location.href = WHATSAPP_GROUP_URL
+      return
+    }
+    const timer = setTimeout(() => setCountdown(c => c - 1), 1000)
+    return () => clearTimeout(timer)
+  }, [status, countdown])
 
   // Follow the country picked in the language popup until the user changes it here.
   useEffect(() => {
@@ -282,10 +296,15 @@ export default function WaitingListPage() {
                   <div className={styles.successIconWrap}><IconCheck /></div>
                   <h2 className={styles.successTitle}>{t('waitingList.form.success.title')}</h2>
                   <p className={styles.successSub}>{t('waitingList.form.success.subtitle')}</p>
-                  <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className={styles.whatsappBtn}>
+                  <a href={WHATSAPP_GROUP_URL} className={styles.whatsappBtn}>
                     <IconWhatsApp />
                     {t('waitingList.form.success.whatsappCta')}
                   </a>
+                  <p className={styles.redirectNote} aria-live="polite">
+                    {countdown > 0
+                      ? t('waitingList.form.success.redirecting').replace('{n}', countdown)
+                      : t('waitingList.form.success.redirectFallback')}
+                  </p>
                   <Link to="/" className={styles.successBackLink}>{t('waitingList.form.success.back')}</Link>
                 </div>
               ) : (

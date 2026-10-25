@@ -122,6 +122,8 @@
         "title":           "Bienvenue sur la liste d'attente JengaX 🎉",
         "subtitle":        "Dernière étape : rejoignez le groupe WhatsApp JengaX. C'est là que nous partagerons les nouvelles et le lien de téléchargement dès que l'application sera prête.",
         "whatsappCta":     "Rejoindre le groupe WhatsApp",
+        "redirecting":     "Ouverture du groupe WhatsApp dans {n}… Appuyez ensuite sur « Rejoindre ».",
+        "redirectFallback": "WhatsApp ne s'est pas ouvert ? Appuyez sur le bouton ci-dessus.",
         "back":            "Retour au site"
       }
     },

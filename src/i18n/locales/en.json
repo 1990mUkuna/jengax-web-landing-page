@@ -161,6 +161,8 @@
         "title":           "Welcome to the JengaX waiting list 🎉",
         "subtitle":        "Last step: join the JengaX WhatsApp group. That's where we'll share news and the download link as soon as the app is ready.",
         "whatsappCta":     "Join the WhatsApp group",
+        "redirecting":     "Opening the WhatsApp group in {n}… Then tap “Join”.",
+        "redirectFallback": "WhatsApp didn't open? Tap the button above.",
         "back":            "Back to the site"
       }
     },
