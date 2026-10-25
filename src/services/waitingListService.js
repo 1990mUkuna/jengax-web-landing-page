@@ -38,10 +38,3 @@ export async function submitWaitingList(data) {
     throw new Error(err.message || 'Submission failed')
   }
 }
-
-// wa.me click-to-chat link to the JengaX WhatsApp Business number.
-export function whatsappConfirmUrl(message) {
-  const number = String(import.meta.env.VITE_JENGAX_WHATSAPP_NUMBER || '').replace(/\D/g, '')
-  if (!number) return null
-  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`
-}

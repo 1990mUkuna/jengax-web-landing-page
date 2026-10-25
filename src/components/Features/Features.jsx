@@ -1,7 +1,6 @@
 import styles from './Features.module.css'
 import { useI18n } from '../../i18n/I18nProvider'
-
-const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/KiL1qY9owJP1HrTZE8ojsI'
+import { WHATSAPP_GROUP_URL } from '../../config/links'
 
 const IconCart = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

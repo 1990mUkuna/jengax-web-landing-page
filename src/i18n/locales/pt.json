@@ -111,9 +111,8 @@
       "notificationLanguage": "Idioma das notificações:",
       "success": {
         "title":           "Bem-vindo(a) à lista de espera JengaX 🎉",
-        "subtitle":        "Último passo: confirme a sua inscrição no WhatsApp para receber o link de download assim que a aplicação estiver pronta.",
-        "whatsappCta":     "Confirmar no WhatsApp",
-        "whatsappMessage": "Olá JengaX, acabei de entrar na lista de espera.",
+        "subtitle":        "Último passo: entre no grupo de WhatsApp da JengaX. É lá que partilharemos as novidades e o link de download assim que a aplicação estiver pronta.",
+        "whatsappCta":     "Entrar no grupo de WhatsApp",
         "back":            "Voltar ao site"
       }
     },

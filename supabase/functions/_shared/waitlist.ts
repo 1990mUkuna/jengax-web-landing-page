@@ -2,19 +2,23 @@
 
 export type Lang = 'fr' | 'en' | 'pt'
 
+// Same group as src/config/links.js on the website.
+export const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/KiL1qY9owJP1HrTZE8ojsI'
+
 export const lang = (value: unknown): Lang =>
   value === 'en' || value === 'pt' ? value : 'fr'
 
-const WELCOME: Record<Lang, { subject: string; lines: string[] }> = {
+const WELCOME: Record<Lang, { subject: string; lines: string[]; group: string }> = {
   fr: {
     subject: 'Bienvenue chez JengaX 👷🏾‍♂️',
     lines: [
       'Bienvenue chez JengaX 👷🏾‍♂️',
       "Merci d'avoir rejoint notre liste d'attente, votre inscription est confirmée.",
       "En attendant, préparez la liste de vos métiers et spécialités (carrelage, plomberie, maçonnerie…). Vous pourrez les ajouter à votre profil dès l'ouverture de l'application.",
-      "📲 Enregistrez notre numéro WhatsApp sous « JengaX » : nous vous enverrons le lien de téléchargement dès que l'application sera prête.",
+      "📲 Rejoignez le groupe WhatsApp JengaX : c'est là que nous partagerons le lien de téléchargement dès que l'application sera prête.",
       "L'équipe JengaX — Construisez. De partout.",
     ],
+    group: 'Rejoindre le groupe WhatsApp',
   },
   en: {
     subject: 'Welcome to JengaX 👷🏾‍♂️',
@@ -22,9 +26,10 @@ const WELCOME: Record<Lang, { subject: string; lines: string[] }> = {
       'Welcome to JengaX 👷🏾‍♂️',
       'Thank you for joining our waiting list, your signup is confirmed.',
       'In the meantime, prepare the list of your trades and specialties (tiling, plumbing, masonry…). You will be able to add them to your profile as soon as the app opens.',
-      '📲 Save our WhatsApp number as "JengaX": we will send you the download link as soon as the app is ready.',
+      '📲 Join the JengaX WhatsApp group: that is where we will share the download link as soon as the app is ready.',
       'The JengaX team — Build it. From anywhere.',
     ],
+    group: 'Join the WhatsApp group',
   },
   pt: {
     subject: 'Bem-vindo(a) à JengaX 👷🏾‍♂️',
@@ -32,9 +37,10 @@ const WELCOME: Record<Lang, { subject: string; lines: string[] }> = {
       'Bem-vindo(a) à JengaX 👷🏾‍♂️',
       'Obrigado por entrar na nossa lista de espera, a sua inscrição está confirmada.',
       'Entretanto, prepare a lista dos seus ofícios e especialidades (azulejo, canalização, alvenaria…). Poderá adicioná-los ao seu perfil assim que a aplicação abrir.',
-      '📲 Guarde o nosso número de WhatsApp como «JengaX»: enviaremos o link de download assim que a aplicação estiver pronta.',
+      '📲 Entre no grupo de WhatsApp da JengaX: é lá que partilharemos o link de download assim que a aplicação estiver pronta.',
       'A equipa JengaX — Construa. De qualquer lugar.',
     ],
+    group: 'Entrar no grupo de WhatsApp',
   },
 }
 
@@ -86,15 +92,20 @@ const layout = (paragraphs: string[], buttons = '') => `<!doctype html>
   </div>
 </body></html>`
 
+const btn = (href: string, label: string, color = '#E5383B') =>
+  href ? `<a href="${escape(href)}" style="display:inline-block;margin:0 8px 12px 0;padding:12px 20px;background:${color};color:#fff;border-radius:100px;text-decoration:none;font-weight:700;font-size:14px">${escape(label)}</a>` : ''
+
 export function welcomeEmail(l: Lang) {
   const m = WELCOME[l]
-  return { subject: m.subject, text: m.lines.join('\n\n'), html: layout(m.lines) }
+  return {
+    subject: m.subject,
+    text: [...m.lines.slice(0, -1), `${m.group}: ${WHATSAPP_GROUP_URL}`, m.lines.at(-1)].join('\n\n'),
+    html: layout(m.lines, `<p style="margin:8px 0 16px">${btn(WHATSAPP_GROUP_URL, m.group, '#25D366')}</p>`),
+  }
 }
 
 export function launchEmail(l: Lang, iosUrl: string, androidUrl: string) {
   const m = LAUNCH[l]
-  const btn = (href: string, label: string) =>
-    href ? `<a href="${escape(href)}" style="display:inline-block;margin:0 8px 12px 0;padding:12px 20px;background:#E5383B;color:#fff;border-radius:100px;text-decoration:none;font-weight:700;font-size:14px">${escape(label)}</a>` : ''
   const links = [iosUrl && `${m.ios}: ${iosUrl}`, androidUrl && `${m.android}: ${androidUrl}`].filter(Boolean)
   return {
     subject: m.subject,

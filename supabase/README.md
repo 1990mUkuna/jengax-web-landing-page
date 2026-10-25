@@ -4,8 +4,12 @@ Project: **JengaX-Engineering** (`udxpyuqcwvsqvdxfbiki`).
 
 | When | WhatsApp (free) | Email (free, Resend) |
 |---|---|---|
-| Someone joins | Taps "Confirmer sur WhatsApp" → Business App greeting replies | `waitlist-welcome` sends automatically |
-| App is ready | Broadcast lists, 256 per list (`admin/launch_broadcast.sql`) | `waitlist-launch` emails everyone |
+| Someone joins | Success screen → "Rejoindre le groupe WhatsApp" (group invite link) | `waitlist-welcome` sends automatically (also links the group) |
+| App is ready | Post the store links in the group | `waitlist-launch` emails everyone |
+
+The group link lives in `src/config/links.js` (website) and `functions/_shared/waitlist.ts` (emails).
+WhatsApp groups hold up to 1,024 members; beyond that, use a WhatsApp Community or broadcast
+lists (`admin/launch_broadcast.sql`).
 
 Later, paid WhatsApp Cloud API can reuse the same columns (no schema change).
 
@@ -37,8 +41,6 @@ Later, paid WhatsApp Cloud API can reuse the same columns (no schema change).
    npx supabase functions deploy waitlist-launch  --no-verify-jwt --project-ref udxpyuqcwvsqvdxfbiki
    ```
 
-6. **Website** — Vercel → Settings → Environment Variables:
-   `VITE_JENGAX_WHATSAPP_NUMBER` = WhatsApp Business number, digits only (e.g. `27719403375`).
 
 ## Launch day
 
@@ -50,7 +52,8 @@ curl -X POST https://udxpyuqcwvsqvdxfbiki.supabase.co/functions/v1/waitlist-laun
 ```
 Remove `"dryRun": true` to send.
 
-**WhatsApp** — follow `admin/launch_broadcast.sql` (export 256 → broadcast → mark batch).
+**WhatsApp** — post the store links in the JengaX group. For people not in the group,
+`admin/launch_broadcast.sql` exports opted-in numbers for broadcast lists (256 per list).
 
 ## Checks
 

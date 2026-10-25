@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './WaitingListPage.module.css'
 import { useI18n } from '../../i18n/I18nProvider'
-import { submitWaitingList, whatsappConfirmUrl, DuplicateSignupError } from '../../services/waitingListService'
+import { submitWaitingList, DuplicateSignupError } from '../../services/waitingListService'
+import { WHATSAPP_GROUP_URL } from '../../config/links'
 import { PHONE_COUNTRIES, OTHER_COUNTRY, DEFAULT_PHONE_COUNTRY, toE164 } from '../../utils/phone'
 
 const FlagDRC = () => (
@@ -232,7 +233,6 @@ export default function WaitingListPage() {
   const showContact  = category === 'constructionCompany' || category === 'supplierShop'
   const showFullName = category === 'soloBuilder' || category === 'homeOwner'
   const emailReq     = category === 'constructionCompany'
-  const whatsappUrl  = whatsappConfirmUrl(t('waitingList.form.success.whatsappMessage'))
 
   return (
     <div className={styles.page}>
@@ -282,12 +282,10 @@ export default function WaitingListPage() {
                   <div className={styles.successIconWrap}><IconCheck /></div>
                   <h2 className={styles.successTitle}>{t('waitingList.form.success.title')}</h2>
                   <p className={styles.successSub}>{t('waitingList.form.success.subtitle')}</p>
-                  {whatsappUrl && (
-                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className={styles.whatsappBtn}>
-                      <IconWhatsApp />
-                      {t('waitingList.form.success.whatsappCta')}
-                    </a>
-                  )}
+                  <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className={styles.whatsappBtn}>
+                    <IconWhatsApp />
+                    {t('waitingList.form.success.whatsappCta')}
+                  </a>
                   <Link to="/" className={styles.successBackLink}>{t('waitingList.form.success.back')}</Link>
                 </div>
               ) : (
