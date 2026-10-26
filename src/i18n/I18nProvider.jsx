@@ -13,6 +13,8 @@ export default function I18nProvider({ children }) {
   const [modalVisible, setModalVisible] = useState(() => !localStorage.getItem('jengax_locale'))
 
   useEffect(() => {
+    // Tell the browser the real page language, so Chrome doesn't offer to translate French/Portuguese pages as "English".
+    document.documentElement.lang = locale
     localStorage.setItem('jengax_locale', locale)
   }, [locale])
 
