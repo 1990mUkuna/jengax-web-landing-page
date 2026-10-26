@@ -1,6 +1,6 @@
 {
   "nav": {"howItWorks":"How it works","features":"Features","markets":"Markets","waitingList":"Waiting List","downloadApp":"Download App"},
-  "hero": {"headline_line1":"Your home. Built right.","headline_line2":"From anywhere in","headline_line3":"the world.","subtext":"The construction marketplace for the African diaspora to build with trust. Manage milestones, payments, and site progress in real-time.","appStore":"App Store","googlePlay":"Google Play","freeNote":"Free to download · iOS & Android"},
+  "hero": {"phoneAlt": "JengaX app welcome screen", "headline_line1":"Your home. Built right.","headline_line2":"From anywhere in","headline_line3":"the world.","subtext":"The construction marketplace for the African diaspora to build with trust. Manage milestones, payments, and site progress in real-time.","appStore":"App Store","googlePlay":"Google Play","freeNote":"Free to download · iOS & Android"},
   "footer": {"company":"Company","support":"Support","connect":"Connect","careers":"Careers","press":"Press","partners":"Partners","contact":"Contact Us","help":"Help Center","privacy":"Privacy Policy","tagline":"Build it. From anywhere.","copy":"© 2024 JengaX. All rights reserved.","terms":"Terms of Service"},
   "cta": {"title":"Ready to break ground?","subtitle":"Join 5,000+ diaspora members building their legacy with JengaX. Start your first project milestone today.","appStoreSmall":"App Store","getItOn":"Get it On","downloadNow":"Download Now","googlePlay":"Google Play"},
 

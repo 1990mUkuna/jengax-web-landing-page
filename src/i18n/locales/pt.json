@@ -1,6 +1,6 @@
 {
   "nav": {"howItWorks":"Como funciona","features":"Recursos","markets":"Mercados","waitingList":"Lista de espera","downloadApp":"Baixar"},
-  "hero": {"headline_line1":"Sua casa. Construída com qualidade.","headline_line2":"De qualquer lugar","headline_line3":"do mundo.","subtext":"O marketplace de construção para a diáspora africana. Gerencie marcos, pagamentos e progresso do canteiro em tempo real.","appStore":"App Store","googlePlay":"Google Play","freeNote":"Grátis para baixar · iOS & Android"},
+  "hero": {"phoneAlt": "Ecrã inicial da aplicação JengaX", "headline_line1":"Sua casa. Construída com qualidade.","headline_line2":"De qualquer lugar","headline_line3":"do mundo.","subtext":"O marketplace de construção para a diáspora africana. Gerencie marcos, pagamentos e progresso do canteiro em tempo real.","appStore":"App Store","googlePlay":"Google Play","freeNote":"Grátis para baixar · iOS & Android"},
   "footer": {"company":"Empresa","support":"Suporte","connect":"Conectar","careers":"Carreiras","press":"Imprensa","partners":"Parceiros","contact":"Fale conosco","help":"Central de Ajuda","privacy":"Política de Privacidade","tagline":"Construa. De qualquer lugar.","copy":"© 2024 JengaX. Todos os direitos reservados.","terms":"Termos de Serviço"},
   "cta": {"title":"Pronto para começar a obra?","subtitle":"Junte-se a mais de 5.000 membros da diáspora construindo seu legado com a JengaX. Inicie seu primeiro marco hoje.","appStoreSmall":"App Store","getItOn":"Get it On","downloadNow":"Baixar agora","googlePlay":"Google Play"},
 
