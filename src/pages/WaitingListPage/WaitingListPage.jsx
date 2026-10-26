@@ -140,7 +140,7 @@ function requiredFor(category) {
 export default function WaitingListPage() {
   const { t, locale } = useI18n()
 
-  const [category, setCategory] = useState('homeOwner')
+  const [category, setCategory] = useState('soloBuilder')
   const [form, setForm]         = useState(() => blankForm(locale))
   const [errors, setErrors]     = useState({})
   const [status, setStatus]     = useState('idle') // idle | submitting | success | duplicate | error
