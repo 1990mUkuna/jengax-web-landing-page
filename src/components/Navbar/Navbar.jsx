@@ -3,10 +3,12 @@ import { NavLink } from 'react-router-dom'
 import styles from './Navbar.module.css'
 import { useI18n } from '../../i18n/I18nProvider'
 import logoImg from '../../assets/jengaXLogo.png'
+import { useAppAccess } from '../AppAccessModal/AppAccessModal'
 
 export default function Navbar() {
   const { t, locale, showLocaleModal } = useI18n()
   const [menuOpen, setMenuOpen] = useState(false)
+  const openAppAccess = useAppAccess()
 
   const NAV_LINKS = [
     { label: t('nav.howItWorks'), href: '/#how-it-works' },
@@ -48,9 +50,9 @@ export default function Navbar() {
         </ul>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <NavLink to="/features" className={styles.cta}>
+          <a href="/waiting-list" className={styles.cta} onClick={(e) => { setMenuOpen(false); openAppAccess(e) }}>
             {t('nav.downloadApp')}
-          </NavLink>
+          </a>
 
           <button className={styles.langBtn} aria-label="Change language" onClick={() => showLocaleModal()}>
             {FLAGS[locale] || '🌐'}

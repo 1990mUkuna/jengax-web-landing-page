@@ -5,6 +5,7 @@ import gardenImg from '../../assets/garden_img_before_after.png'
 import Footer from '../../components/Footer/Footer'
 import styles from './FeaturesPage.module.css'
 import { useI18n } from '../../i18n/I18nProvider'
+import { useAppAccess } from '../../components/AppAccessModal/AppAccessModal'
 
 // ─── Icons ───────────────────────────────────────────────────────────────────
 
@@ -186,6 +187,7 @@ function PrecisionEngineering() {
 
 function FeaturesCTA() {
   const { t } = useI18n()
+  const openAppAccess = useAppAccess()
   return (
     <section className={styles.featuresCta}>
       <div className={styles.container}>
@@ -193,13 +195,13 @@ function FeaturesCTA() {
           <h2 className={styles.ctaTitle}>{t('featuresPage.cta.title')}</h2>
           <p className={styles.ctaSub}>{t('featuresPage.cta.subtitle')}</p>
           <div className={styles.ctaActions}>
-            <a href="#" className={styles.ctaBtn}>
+            <a href="/waiting-list" className={styles.ctaBtn} onClick={openAppAccess}>
               <span className={styles.ctaBtnLabel}>
                 <small>{t('featuresPage.cta.appStoreSmall')}</small>
                 {t('featuresPage.cta.appStore')}
               </span>
             </a>
-            <a href="#" className={styles.ctaBtnOutline}>
+            <a href="/waiting-list" className={styles.ctaBtnOutline} onClick={openAppAccess}>
               <span className={styles.ctaBtnLabel}>
                 <small>{t('featuresPage.cta.getItOn')}</small>
                 {t('featuresPage.cta.googlePlay')}

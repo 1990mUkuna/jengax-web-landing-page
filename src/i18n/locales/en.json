@@ -188,5 +188,14 @@
     "precision": {"title":"Precision Engineering for Every Milestone","subtitle":"Five core modules designed to eliminate uncertainty and empower your build journey from afar."},
     "bento": {"analysisTag":"ANALYSIS","aiSite":{"title":"AI Site Analyser","desc":"Real-time flaw detection via high-fidelity video feeds. Our neural engine spots structural inconsistencies before they become costly errors.","cta":"Learn More →"},"cart":{"title":"Collaborative Material Cart","desc":"Access wholesale pricing and transparent supply chains. Direct-to-site delivery with GPS tracking and automated inventory updates.","cta":"Explore Marketplace →"},"securityTag":"SECURITY","escrow":{"title":"Milestone Escrow","desc":"Funds are held in secure escrow and only released after site inspections verify milestone completion."},"visualTag":"VISUALIZATION","design":{"title":"AI Design Preview","desc":"Map high-end interior changes onto your real site using augmented reality before buying a single tile."},"communityTag":"COMMUNITY","collective":{"title":"JengaX Collective","desc":"Pooled investments for the diaspora. Join forces with others to develop premium projects and share in the equity."}},
     "cta": {"title":"Start your transformation.","subtitle":"Download the JengaX app today and take the first step toward building your legacy with confidence.","appStoreSmall":"Download on the","appStore":"App Store","getItOn":"Get it On","googlePlay":"Google Play"}
+  },
+  "appAccess": {
+    "badge": "Private beta",
+    "title": "Early access only",
+    "text": "The JengaX app is currently available only to our internal testers and our first 200 founding members.",
+    "subtext": "Request access: join the waiting list and we'll send you the download link as soon as a spot opens up.",
+    "request": "Request access",
+    "later": "Maybe later",
+    "close": "Close"
   }
 }
