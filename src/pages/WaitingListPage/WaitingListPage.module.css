@@ -270,6 +270,12 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
+}
+
+.mainGrid > *,
+.fieldsGrid > * {
+  min-width: 0;
 }
 
 .fullWidth {
@@ -301,6 +307,8 @@
   outline: none;
   transition: border-color 0.17s, box-shadow 0.17s;
   width: 100%;
+  min-width: 0;
+  min-height: 46px;
 }
 
 .input::placeholder {
@@ -337,6 +345,10 @@
   width: auto;
   max-width: 46%;
   cursor: pointer;
+}
+
+.phoneRow .input:not(.phoneCountry):not(.phoneDial) {
+  flex: 1 1 auto;
 }
 
 .phoneDial {
@@ -669,14 +681,101 @@
   }
 }
 
+/* Phones and small tablets: 16px text in fields stops iOS from zooming in on tap */
+@media (max-width: 768px) {
+  .input {
+    font-size: 16px;
+  }
+  .mainSection {
+    padding: 32px 0 56px;
+  }
+  .formHeader {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+  }
+  .catSection {
+    margin-bottom: 24px;
+  }
+  .successState {
+    padding: 40px 8px;
+  }
+}
+
 @media (max-width: 480px) {
+  /* Compact hero so the form starts near the top of the screen */
+  .hero {
+    min-height: 0;
+  }
+  .heroContent {
+    padding: 28px 16px 32px;
+  }
+  .pill {
+    margin-bottom: 14px;
+  }
+  .heroTitle {
+    font-size: 1.9rem;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+  .heroSub {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+  .heroStats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 12px;
+  }
+  .heroStat {
+    padding-right: 0;
+  }
+  .heroStat strong {
+    font-size: 1.35rem;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+  .formCard {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+  .formTitle {
+    font-size: 1.45rem;
+  }
   .catGrid {
     grid-template-columns: 1fr 1fr;
+    gap: 8px;
   }
   .catCard {
     padding: 14px 8px 12px;
   }
   .catCardDesc {
     display: none;
+  }
+
+  /* Phone: country code on its own line so it is never cut off */
+  .phoneRow {
+    flex-wrap: wrap;
+  }
+  .phoneCountry {
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .consent input {
+    width: 22px;
+    height: 22px;
+  }
+  .consentError {
+    margin-left: 32px;
+  }
+  .submitBtn {
+    padding: 16px 20px;
+  }
+  .whatsappBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
   }
 }
