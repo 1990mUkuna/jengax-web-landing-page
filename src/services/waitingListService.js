@@ -17,6 +17,7 @@ export async function submitWaitingList(data) {
     country:            data.country,
     city:               data.city,
     whatsapp_opt_in:    data.whatsappOptIn === true,
+    phone_platforms:    data.phonePlatforms,
     preferred_language: data.language,
   }
 

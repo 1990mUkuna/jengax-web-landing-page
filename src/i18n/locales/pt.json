@@ -91,7 +91,11 @@
           "text": "Por exemplo: cimento, ferro, chapas, ladrilhos, tinta, madeira ou material de canalização e eletricidade."
         }
       },
+      "phoneTypes": { "ios": "iPhone (iOS)", "android": "Android" },
+      "phoneTypeHint": "Tem os dois? Escolha os dois.",
+      "errorPhoneType": "Escolha pelo menos um tipo de telemóvel.",
       "fields": {
+        "phoneType": "Tipo de telemóvel",
         "fullName":       "Nome completo",
         "companyName":    "Nome da empresa",
         "shopName":       "Nome da loja",

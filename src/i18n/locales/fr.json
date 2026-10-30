@@ -100,7 +100,11 @@
           "text": "Par exemple : ciment, fer à béton, tôles, carreaux, peinture, bois ou matériel de plomberie et d'électricité."
         }
       },
+      "phoneTypes": { "ios": "iPhone (iOS)", "android": "Android" },
+      "phoneTypeHint": "Vous avez les deux ? Choisissez les deux.",
+      "errorPhoneType": "Choisissez au moins un type de téléphone.",
       "fields": {
+        "phoneType": "Type de téléphone",
         "fullName":       "Nom complet",
         "companyName":    "Nom de l'entreprise",
         "shopName":       "Nom de la boutique",

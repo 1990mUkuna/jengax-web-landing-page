@@ -139,7 +139,11 @@
           "text": "For example: cement, rebar, roofing sheets, tiles, paint, timber or plumbing and electrical supplies."
         }
       },
+      "phoneTypes": { "ios": "iPhone (iOS)", "android": "Android" },
+      "phoneTypeHint": "Have both? Choose both.",
+      "errorPhoneType": "Choose at least one phone type.",
       "fields": {
+        "phoneType": "Phone type",
         "fullName":       "Full Name",
         "companyName":    "Company Name",
         "shopName":       "Shop / Business Name",

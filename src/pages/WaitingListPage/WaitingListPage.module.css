@@ -468,6 +468,56 @@
   width: 76px;
 }
 
+.platformRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.platformBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 12px;
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  background: #fafafa;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.17s, background 0.17s;
+}
+
+.platformBtn:hover {
+  border-color: rgba(229,56,59,0.35);
+  background: #fff;
+}
+
+.platformBtnActive {
+  border-color: var(--color-primary);
+  background: #fff5f5;
+  color: var(--color-primary);
+}
+
+.platformCheck {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .consent {
   display: flex;
   align-items: flex-start;
