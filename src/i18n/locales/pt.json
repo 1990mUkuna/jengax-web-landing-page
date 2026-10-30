@@ -65,10 +65,31 @@
       "subtitle": "Diga-nos quem você é para personalizarmos sua experiência JengaX desde o primeiro dia.",
       "categoryTitle": "Eu sou…",
       "categories": {
-        "soloBuilder":        { "label": "Construtor",          "desc": "Profissional autônomo ou empreiteiro independente" },
-        "constructionCompany":{ "label": "Empresa de construção",    "desc": "Empresa de construção registrada" },
+        "soloBuilder":        { "label": "Construtor",          "desc": "Artesão, chefe de equipa ou pequena empresa", "badge": "Menos de 30 funcionários" },
+        "constructionCompany":{ "label": "Empresa de construção",    "desc": "Grande empresa de construção", "badge": "30 funcionários ou mais" },
         "homeOwner":          { "label": "Proprietário",             "desc": "Construindo ou renovando minha propriedade" },
         "supplierShop":       { "label": "Fornecedor",               "desc": "Fornecedor de materiais de construção" }
+      },
+      "categoryHelp": {
+        "soloBuilder": {
+          "title": "Escolha «Construtor» se faz trabalhos de construção:",
+          "points": ["Sozinho(a), por conta própria", "Com a sua equipa de trabalhadores", "Com a sua empresa registada com menos de 30 funcionários"],
+          "tradesTitle": "Por exemplo, faz:",
+          "trades": ["Alvenaria", "Ladrilhos", "Canalização", "Eletricidade", "Pintura", "Carpintaria", "Design de interiores", "Telhados", "Soldadura", "Gesso e tetos falsos"]
+        },
+        "constructionCompany": {
+          "title": "Escolha «Empresa de construção» se a sua empresa tem 30 funcionários ou mais.",
+          "text": "A sua empresa está registada e gere grandes obras com muitos trabalhadores.",
+          "switch": "Menos de 30 funcionários? Escolha «Construtor»"
+        },
+        "homeOwner": {
+          "title": "Escolha «Proprietário» se quer construir ou renovar.",
+          "text": "Uma casa, um prédio ou uma loja, no local ou a partir do estrangeiro. A JengaX liga-o a construtores verificados."
+        },
+        "supplierShop": {
+          "title": "Escolha «Fornecedor» se vende materiais de construção.",
+          "text": "Por exemplo: cimento, ferro, chapas, ladrilhos, tinta, madeira ou material de canalização e eletricidade."
+        }
       },
       "fields": {
         "fullName":       "Nome completo",

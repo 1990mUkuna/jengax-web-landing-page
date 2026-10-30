@@ -28,11 +28,11 @@ const FlagAngola = () => (
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
 
-const IconHardHat = () => (
+const IconHammer = () => (
   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/>
-    <path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/>
-    <path d="M4 15v-3a8 8 0 0 1 16 0v3"/>
+    <path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/>
+    <path d="m18 15 4-4"/>
+    <path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/>
   </svg>
 )
 
@@ -102,13 +102,16 @@ const IconWhatsApp = () => (
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const CATEGORIES = [
-  { key: 'soloBuilder',        Icon: IconHardHat  },
+  { key: 'soloBuilder',        Icon: IconHammer   },
   { key: 'constructionCompany', Icon: IconBuilding },
   { key: 'homeOwner',           Icon: IconHome     },
   { key: 'supplierShop',        Icon: IconStore    },
 ]
 
 const BENEFIT_ICONS = [IconRocket, IconGift, IconStar]
+
+// Trades shown as picture chips under "Constructeur" (emoji keep it readable for everyone)
+const TRADE_EMOJIS = ['🧱', '🔲', '🚿', '⚡', '🎨', '🔨', '🛋️', '🏠', '🔥', '⬜']
 
 // Country choice decides the notification language (welcome + launch messages).
 const COUNTRY_CHOICES = {
@@ -338,8 +341,41 @@ export default function WaitingListPage() {
                           <span className={styles.catIcon}><Icon /></span>
                           <span className={styles.catCardLabel}>{t(`waitingList.form.categories.${key}.label`)}</span>
                           <span className={styles.catCardDesc}>{t(`waitingList.form.categories.${key}.desc`)}</span>
+                          {(key === 'soloBuilder' || key === 'constructionCompany') && (
+                            <span className={styles.catBadge}>{t(`waitingList.form.categories.${key}.badge`)}</span>
+                          )}
                         </button>
                       ))}
+                    </div>
+
+                    {/* Plain-language help for the selected category */}
+                    <div className={styles.catHelp} aria-live="polite">
+                      <p className={styles.catHelpTitle}>{t(`waitingList.form.categoryHelp.${category}.title`)}</p>
+                      {category === 'soloBuilder' && (
+                        <>
+                          <ul className={styles.catHelpList}>
+                            {t('waitingList.form.categoryHelp.soloBuilder.points').map(point => (
+                              <li key={point}>{point}</li>
+                            ))}
+                          </ul>
+                          <p className={styles.catHelpSub}>{t('waitingList.form.categoryHelp.soloBuilder.tradesTitle')}</p>
+                          <div className={styles.tradeChips}>
+                            {t('waitingList.form.categoryHelp.soloBuilder.trades').map((trade, i) => (
+                              <span key={trade} className={styles.tradeChip}>
+                                <span aria-hidden="true">{TRADE_EMOJIS[i]}</span> {trade}
+                              </span>
+                            ))}
+                          </div>
+                        </>
+                      )}
+                      {category !== 'soloBuilder' && (
+                        <p className={styles.catHelpText}>{t(`waitingList.form.categoryHelp.${category}.text`)}</p>
+                      )}
+                      {category === 'constructionCompany' && (
+                        <button type="button" className={styles.catHelpSwitch} onClick={() => handleCategory('soloBuilder')}>
+                          {t('waitingList.form.categoryHelp.constructionCompany.switch')}
+                        </button>
+                      )}
                     </div>
                   </div>
 

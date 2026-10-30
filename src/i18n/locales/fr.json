@@ -74,10 +74,31 @@
       "subtitle": "Dites-nous qui vous êtes pour personnaliser votre expérience JengaX dès le premier jour.",
       "categoryTitle": "Je suis…",
       "categories": {
-        "soloBuilder":        { "label": "Constructeur",           "desc": "Artisan ou entrepreneur indépendant" },
-        "constructionCompany":{ "label": "Entreprise de construction",  "desc": "Société de construction enregistrée" },
+        "soloBuilder":        { "label": "Constructeur",           "desc": "Artisan, chef d'équipe ou petite entreprise", "badge": "Moins de 30 employés" },
+        "constructionCompany":{ "label": "Entreprise de construction",  "desc": "Grande société de construction", "badge": "30 employés ou plus" },
         "homeOwner":          { "label": "Propriétaire",                "desc": "Construction ou rénovation de ma propriété" },
         "supplierShop":       { "label": "Fournisseur",                 "desc": "Fournisseur de matériaux de construction" }
+      },
+      "categoryHelp": {
+        "soloBuilder": {
+          "title": "Choisissez « Constructeur » si vous faites des travaux de construction :",
+          "points": ["Seul(e), à votre compte", "Avec votre équipe d'ouvriers", "Avec votre entreprise enregistrée de moins de 30 employés"],
+          "tradesTitle": "Par exemple, vous faites :",
+          "trades": ["Maçonnerie", "Carrelage", "Plomberie", "Électricité", "Peinture", "Menuiserie", "Design d'intérieur", "Toiture", "Soudure", "Plâtre et faux plafond"]
+        },
+        "constructionCompany": {
+          "title": "Choisissez « Entreprise de construction » si votre société a 30 employés ou plus.",
+          "text": "Votre société est enregistrée et gère de grands chantiers avec beaucoup d'ouvriers.",
+          "switch": "Moins de 30 employés ? Choisissez « Constructeur »"
+        },
+        "homeOwner": {
+          "title": "Choisissez « Propriétaire » si vous voulez construire ou rénover.",
+          "text": "Une maison, un immeuble ou un magasin, sur place ou depuis l'étranger. JengaX vous met en contact avec des constructeurs vérifiés."
+        },
+        "supplierShop": {
+          "title": "Choisissez « Fournisseur » si vous vendez des matériaux.",
+          "text": "Par exemple : ciment, fer à béton, tôles, carreaux, peinture, bois ou matériel de plomberie et d'électricité."
+        }
       },
       "fields": {
         "fullName":       "Nom complet",

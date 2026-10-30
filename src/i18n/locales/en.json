@@ -113,10 +113,31 @@
       "subtitle": "Tell us who you are so we can personalise your JengaX experience from day one.",
       "categoryTitle": "I am a...",
       "categories": {
-        "soloBuilder":        { "label": "Builder",          "desc": "Independent tradesperson or contractor" },
-        "constructionCompany":{ "label": "Construction Company",  "desc": "Registered construction business" },
+        "soloBuilder":        { "label": "Builder",          "desc": "Tradesperson, team leader or small business", "badge": "Under 30 employees" },
+        "constructionCompany":{ "label": "Construction Company",  "desc": "Large construction company", "badge": "30 employees or more" },
         "homeOwner":          { "label": "Home Owner",            "desc": "Building or renovating my property" },
         "supplierShop":       { "label": "Supplier Shop",         "desc": "Construction materials supplier" }
+      },
+      "categoryHelp": {
+        "soloBuilder": {
+          "title": "Choose “Builder” if you do construction work:",
+          "points": ["On your own, self-employed", "With your own team of workers", "With your registered company of fewer than 30 employees"],
+          "tradesTitle": "For example, you do:",
+          "trades": ["Masonry", "Tiling", "Plumbing", "Electrical", "Painting", "Carpentry", "Interior design", "Roofing", "Welding", "Plaster & ceilings"]
+        },
+        "constructionCompany": {
+          "title": "Choose “Construction Company” if your company has 30 employees or more.",
+          "text": "Your company is registered and runs large sites with many workers.",
+          "switch": "Fewer than 30 employees? Choose “Builder”"
+        },
+        "homeOwner": {
+          "title": "Choose “Home Owner” if you want to build or renovate.",
+          "text": "A house, a building or a shop, locally or from abroad. JengaX connects you with verified builders."
+        },
+        "supplierShop": {
+          "title": "Choose “Supplier Shop” if you sell building materials.",
+          "text": "For example: cement, rebar, roofing sheets, tiles, paint, timber or plumbing and electrical supplies."
+        }
       },
       "fields": {
         "fullName":       "Full Name",
